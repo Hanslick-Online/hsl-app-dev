@@ -24,6 +24,10 @@ h3 {
     margin-top: 1em;
 }*/
 
+.section-critics {
+    display: table;
+}
+
 .section-critics p {
     margin-bottom: 0 !important;
 }
@@ -924,6 +928,9 @@ input:checked + .i-slider:before {
 }
 
 @media (max-width: 1024px) {
+    .container-fluid {
+        max-width: 100%;
+    }
     .seg-inline {
         display: block;
     }
