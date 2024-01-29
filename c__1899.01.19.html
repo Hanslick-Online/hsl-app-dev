@@ -20,7 +20,7 @@
       <link rel="stylesheet" href="css/style.css" type="text/css" /><script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script><script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/openseadragon/4.0.0/openseadragon.min.js"></script><link rel="stylesheet" href="css/de-micro-editor.css" /><script src="https://cdnjs.cloudflare.com/ajax/libs/openseadragon/4.0.0/openseadragon.min.js"></script></head>
    <body class="page">
       <div class="hfeed site" id="page">
-         <div class="wrapper-fluid wrapper-navbar sticky-top" id="wrapper-navbar"><a class="skip-link screen-reader-text sr-only" href="#content">Skip to content</a><nav class="autohide navbar navbar-expand-lg bg-light">
+         <div class="wrapper-fluid wrapper-navbar sticky-top" id="wrapper-navbar"><a class="skip-link screen-reader-text sr-only" href="#content">Skip to content</a><nav class="autohide navbar navbar-expand-lg">
                <div class="container"><a href="index.html?lang=de" class="navbar-brand custom-logo-link" rel="home" itemprop="url"><img src="images/logo_font_blau.svg" class="img-fluid" title="Hanslick - Digitale Edition" alt="Hanslick - Digitale Edition" itemprop="logo" /></a><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                      <ul class="navbar-nav mb-2 mb-lg-0 translate-de">
                         <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -144,7 +144,7 @@
                 e.stopPropagation();
             });
         </script><div id="document-download">
-                           <div id="aot-navBarNavDropdown" class="navBarNavDropdown dropstart"><a title="Downloads" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false" role="button"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-file-earmark-arrow-down" viewBox="0 0 16 16">
+                           <div id="aot-navBarNavDropdown" class="navBarNavDropdown dropstart"><a aria-label="Downloads" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false" role="button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-file-earmark-arrow-down" viewBox="0 0 16 16">
                                     <path d="M8.5 6.5a.5.5 0 0 0-1 0v3.793L6.354 9.146a.5.5 0 1 0-.708.708l2 2a.5.5 0 0 0 .708 0l2-2a.5.5 0 0 0-.708-.708L8.5 10.293z"></path>
                                     <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2M9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z"></path></svg></a><ul class="dropdown-menu">
                                  <li class="dropdown-item"><a target="_blank" href="https://raw.githubusercontent.com/Hanslick-Online/hsl-data-ct/main/data/editions/1899.01.19.xml" aria-label="TEI/XML Document Download" download="c__1899.01.19">
@@ -163,7 +163,8 @@
                                     <path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg></a></div>
                         </div>
                      </div>
-                     <div id="mark-scroll"><button data-search="next" disabled="disabled">↓</button><button data-search="prev" disabled="disabled">↑</button><button data-search="clear" disabled="disabled">✖</button></div>
+                     <div id="mark-scroll" class="fade-lang"><button data-search="next" disabled="disabled">↓</button><button data-search="prev" disabled="disabled">↑</button><button data-search="clear" disabled="disabled">✖</button><div id="results-div"></div>
+                     </div>
                      <div class="card-body yes-index">
                         <p class="yes-index meta-head">Neue Freie Presse<br />Morgenblatt<br />Nr. 12360. Wien, Donnerstag, den 19. Januar 1899<br /></p><span class="anchor-pb" source="hsl-nfp/1899.01.19-0001"></span><span class="pb">[1]</span><h1 class="yes-index">„<span class="works entity " id="" data-bs-toggle="modal" data-bs-target="#hsl_work_id_1106"></span>Die Kriegsgefangene.“</h1>
                         <h2 class="yes-index">Oper in zwei Acten von Karl <span class="italic"><span class="persons entity " id="" data-bs-toggle="modal" data-bs-target="#hsl_person_id_101"></span>Goldmark</span>.</h2>
@@ -378,184 +379,33 @@
                            <br class="pb" /><a href="#__p12__lb259" name="__p12__lb259" id="__p12__lb259" class="linenumbersTransparent linenumbers pb">0259</a>Erfolge aufrichtiger wünsche, als unserem <span class="persons entity " id="" data-bs-toggle="modal" data-bs-target="#hsl_person_id_101"></span>Goldmark.</p>
                      </div>
                      <div class="tei-back">
-                        <div class="modal fade" id="hsl_person_id_1743" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Amneris" aria-hidden="true">
+                        <div class="modal fade" id="hsl_person_id_1428" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Neidl, Franz" aria-hidden="true">
                            <div class="modal-dialog modal-dialog-centered">
                               <div class="modal-content">
                                  <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Amneris</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Neidl, Franz</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
                                  <div class="modal-body">
                                     <table>
                                        <tbody>
                                           <tr>
-                                             <th>Werk</th>
-                                             <td>
-                                                <ul>
-                                                   <li>Aida, H62</li>
-                                                </ul>
-                                             </td>
+                                             <th>Lebensdaten</th>
+                                             <td>1858-1926</td>
                                           </tr>
-                                          <tr>
-                                             <th> GND </th>
-                                             <td><a href="" target="_blank"></a></td>
-                                          </tr>
-                                          <tr>
-                                             <th></th>
-                                             <td style="padding-top: 1em;"><a href="hsl_person_id_1743.html"> Weitere Details </a></td>
-                                          </tr>
-                                       </tbody>
-                                    </table>
-                                 </div>
-                                 <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="modal fade" id="hsl_person_id_1727" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Hüon von Bordeaux" aria-hidden="true">
-                           <div class="modal-dialog modal-dialog-centered">
-                              <div class="modal-content">
-                                 <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Hüon von Bordeaux</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                                 <div class="modal-body">
-                                    <table>
-                                       <tbody>
-                                          <tr>
-                                             <th>Werk</th>
-                                             <td>
-                                                <ul>
-                                                   <li>Oberon or The Elf King's Oath, J306</li>
-                                                </ul>
-                                             </td>
-                                          </tr>
-                                          <tr>
-                                             <th> GND </th>
-                                             <td><a href="" target="_blank"></a></td>
-                                          </tr>
-                                          <tr>
-                                             <th></th>
-                                             <td style="padding-top: 1em;"><a href="hsl_person_id_1727.html"> Weitere Details </a></td>
-                                          </tr>
-                                       </tbody>
-                                    </table>
-                                 </div>
-                                 <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="modal fade" id="hsl_person_id_1736" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Hermes" aria-hidden="true">
-                           <div class="modal-dialog modal-dialog-centered">
-                              <div class="modal-content">
-                                 <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Hermes</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                                 <div class="modal-body">
-                                    <table>
-                                       <tbody>
                                           <tr>
                                              <th>Beschreibung</th>
                                              <td>
                                                 <ul>
-                                                   <li>Gottheit</li>
+                                                   <li>Sänger (Bariton)</li>
                                                 </ul>
                                              </td>
                                           </tr>
                                           <tr>
                                              <th> GND </th>
-                                             <td><a href="https://d-nb.info/gnd/118639560" target="_blank">https://d-nb.info/gnd/118639560</a></td>
+                                             <td><a href="https://d-nb.info/gnd/1019425024" target="_blank">https://d-nb.info/gnd/1019425024</a></td>
                                           </tr>
                                           <tr>
                                              <th></th>
-                                             <td style="padding-top: 1em;"><a href="hsl_person_id_1736.html"> Weitere Details </a></td>
-                                          </tr>
-                                       </tbody>
-                                    </table>
-                                 </div>
-                                 <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="modal fade" id="hsl_person_id_1732" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Briseïs" aria-hidden="true">
-                           <div class="modal-dialog modal-dialog-centered">
-                              <div class="modal-content">
-                                 <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Briseïs</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                                 <div class="modal-body">
-                                    <table>
-                                       <tbody>
-                                          <tr>
-                                             <th>Werk</th>
-                                             <td>
-                                                <ul>
-                                                   <li>Die Kriegsgefangene</li>
-                                                </ul>
-                                             </td>
-                                          </tr>
-                                          <tr>
-                                             <th> GND </th>
-                                             <td><a href="" target="_blank"></a></td>
-                                          </tr>
-                                          <tr>
-                                             <th></th>
-                                             <td style="padding-top: 1em;"><a href="hsl_person_id_1732.html"> Weitere Details </a></td>
-                                          </tr>
-                                       </tbody>
-                                    </table>
-                                 </div>
-                                 <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="modal fade" id="hsl_person_id_1737" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Priamus" aria-hidden="true">
-                           <div class="modal-dialog modal-dialog-centered">
-                              <div class="modal-content">
-                                 <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Priamus</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                                 <div class="modal-body">
-                                    <table>
-                                       <tbody>
-                                          <tr>
-                                             <th>Werk</th>
-                                             <td>
-                                                <ul>
-                                                   <li>Die Kriegsgefangene</li>
-                                                </ul>
-                                             </td>
-                                          </tr>
-                                          <tr>
-                                             <th> GND </th>
-                                             <td><a href="" target="_blank"></a></td>
-                                          </tr>
-                                          <tr>
-                                             <th></th>
-                                             <td style="padding-top: 1em;"><a href="hsl_person_id_1737.html"> Weitere Details </a></td>
-                                          </tr>
-                                       </tbody>
-                                    </table>
-                                 </div>
-                                 <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="modal fade" id="hsl_person_id_1739" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Idäus" aria-hidden="true">
-                           <div class="modal-dialog modal-dialog-centered">
-                              <div class="modal-content">
-                                 <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Idäus</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                                 <div class="modal-body">
-                                    <table>
-                                       <tbody>
-                                          <tr>
-                                             <th>Werk</th>
-                                             <td>
-                                                <ul>
-                                                   <li>Die Kriegsgefangene</li>
-                                                </ul>
-                                             </td>
-                                          </tr>
-                                          <tr>
-                                             <th> GND </th>
-                                             <td><a href="" target="_blank"></a></td>
-                                          </tr>
-                                          <tr>
-                                             <th></th>
-                                             <td style="padding-top: 1em;"><a href="hsl_person_id_1739.html"> Weitere Details </a></td>
+                                             <td style="padding-top: 1em;"><a href="hsl_person_id_1428.html"> Weitere Details </a></td>
                                           </tr>
                                        </tbody>
                                     </table>
@@ -599,121 +449,11 @@
                               </div>
                            </div>
                         </div>
-                        <div class="modal fade" id="hsl_person_id_1728" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Bungert, August" aria-hidden="true">
+                        <div class="modal fade" id="hsl_person_id_553" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Hektor" aria-hidden="true">
                            <div class="modal-dialog modal-dialog-centered">
                               <div class="modal-content">
                                  <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Bungert, August</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                                 <div class="modal-body">
-                                    <table>
-                                       <tbody>
-                                          <tr>
-                                             <th>Lebensdaten</th>
-                                             <td>1845-1915</td>
-                                          </tr>
-                                          <tr>
-                                             <th>Beschreibung</th>
-                                             <td>
-                                                <ul>
-                                                   <li>Komponist</li>
-                                                   <li>Schriftsteller</li>
-                                                </ul>
-                                             </td>
-                                          </tr>
-                                          <tr>
-                                             <th> GND </th>
-                                             <td><a href="https://d-nb.info/gnd/118667998" target="_blank">https://d-nb.info/gnd/118667998</a></td>
-                                          </tr>
-                                          <tr>
-                                             <th></th>
-                                             <td style="padding-top: 1em;"><a href="hsl_person_id_1728.html"> Weitere Details </a></td>
-                                          </tr>
-                                       </tbody>
-                                    </table>
-                                 </div>
-                                 <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="modal fade" id="hsl_person_id_1428" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Neidl, Franz" aria-hidden="true">
-                           <div class="modal-dialog modal-dialog-centered">
-                              <div class="modal-content">
-                                 <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Neidl, Franz</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                                 <div class="modal-body">
-                                    <table>
-                                       <tbody>
-                                          <tr>
-                                             <th>Lebensdaten</th>
-                                             <td>1858-1926</td>
-                                          </tr>
-                                          <tr>
-                                             <th>Beschreibung</th>
-                                             <td>
-                                                <ul>
-                                                   <li>Sänger (Bariton)</li>
-                                                </ul>
-                                             </td>
-                                          </tr>
-                                          <tr>
-                                             <th> GND </th>
-                                             <td><a href="https://d-nb.info/gnd/1019425024" target="_blank">https://d-nb.info/gnd/1019425024</a></td>
-                                          </tr>
-                                          <tr>
-                                             <th></th>
-                                             <td style="padding-top: 1em;"><a href="hsl_person_id_1428.html"> Weitere Details </a></td>
-                                          </tr>
-                                       </tbody>
-                                    </table>
-                                 </div>
-                                 <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="modal fade" id="hsl_person_id_215" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Piccinni, Niccolò" aria-hidden="true">
-                           <div class="modal-dialog modal-dialog-centered">
-                              <div class="modal-content">
-                                 <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Piccinni, Niccolò</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                                 <div class="modal-body">
-                                    <table>
-                                       <tbody>
-                                          <tr>
-                                             <th> Name (alt) </th>
-                                             <td>Picinni / Piccini</td>
-                                          </tr>
-                                          <tr>
-                                             <th>Lebensdaten</th>
-                                             <td>1728-1800</td>
-                                          </tr>
-                                          <tr>
-                                             <th>Beschreibung</th>
-                                             <td>
-                                                <ul>
-                                                   <li>Komponist</li>
-                                                </ul>
-                                             </td>
-                                          </tr>
-                                          <tr>
-                                             <th> GND </th>
-                                             <td><a href="https://d-nb.info/gnd/119314061" target="_blank">https://d-nb.info/gnd/119314061</a></td>
-                                          </tr>
-                                          <tr>
-                                             <th></th>
-                                             <td style="padding-top: 1em;"><a href="hsl_person_id_215.html"> Weitere Details </a></td>
-                                          </tr>
-                                       </tbody>
-                                    </table>
-                                 </div>
-                                 <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="modal fade" id="hsl_person_id_1725" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Agamemnon" aria-hidden="true">
-                           <div class="modal-dialog modal-dialog-centered">
-                              <div class="modal-content">
-                                 <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Agamemnon</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Hektor</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
                                  <div class="modal-body">
                                     <table>
                                        <tbody>
@@ -727,11 +467,11 @@
                                           </tr>
                                           <tr>
                                              <th> GND </th>
-                                             <td><a href="https://d-nb.info/gnd/119059738" target="_blank">https://d-nb.info/gnd/119059738</a></td>
+                                             <td><a href="https://d-nb.info/gnd/119291002" target="_blank">https://d-nb.info/gnd/119291002</a></td>
                                           </tr>
                                           <tr>
                                              <th></th>
-                                             <td style="padding-top: 1em;"><a href="hsl_person_id_1725.html"> Weitere Details </a></td>
+                                             <td style="padding-top: 1em;"><a href="hsl_person_id_553.html"> Weitere Details </a></td>
                                           </tr>
                                        </tbody>
                                     </table>
@@ -740,40 +480,54 @@
                               </div>
                            </div>
                         </div>
-                        <div class="modal fade" id="hsl_person_id_977" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Mahler, Gustav" aria-hidden="true">
+                        <div class="modal fade" id="hsl_person_id_319" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Wagner, Richard" aria-hidden="true">
                            <div class="modal-dialog modal-dialog-centered">
                               <div class="modal-content">
                                  <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Mahler, Gustav</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                                 <div class="modal-body">
-                                    <table>
-                                       <tbody>
-                                          <tr>
-                                             <th> GND </th>
-                                             <td><a href="https://d-nb.info/gnd/118576291" target="_blank">https://d-nb.info/gnd/118576291</a></td>
-                                          </tr>
-                                          <tr>
-                                             <th></th>
-                                             <td style="padding-top: 1em;"><a href="hsl_person_id_977.html"> Weitere Details </a></td>
-                                          </tr>
-                                       </tbody>
-                                    </table>
-                                 </div>
-                                 <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="modal fade" id="hsl_person_id_101" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Goldmark, Karl" aria-hidden="true">
-                           <div class="modal-dialog modal-dialog-centered">
-                              <div class="modal-content">
-                                 <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Goldmark, Karl</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Wagner, Richard</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
                                  <div class="modal-body">
                                     <table>
                                        <tbody>
                                           <tr>
                                              <th>Lebensdaten</th>
-                                             <td>1830-1915</td>
+                                             <td>1813-1883</td>
+                                          </tr>
+                                          <tr>
+                                             <th>Beschreibung</th>
+                                             <td>
+                                                <ul>
+                                                   <li>Komponist</li>
+                                                   <li>Schriftsteller</li>
+                                                   <li>Theaterdirektor</li>
+                                                </ul>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <th> GND </th>
+                                             <td><a href="https://d-nb.info/gnd/118594117" target="_blank">https://d-nb.info/gnd/118594117</a></td>
+                                          </tr>
+                                          <tr>
+                                             <th></th>
+                                             <td style="padding-top: 1em;"><a href="hsl_person_id_319.html"> Weitere Details </a></td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </div>
+                                 <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="modal fade" id="hsl_person_id_99" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Gluck, Christoph Willibald" aria-hidden="true">
+                           <div class="modal-dialog modal-dialog-centered">
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Gluck, Christoph Willibald</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                                 <div class="modal-body">
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <th>Lebensdaten</th>
+                                             <td>1714-1787</td>
                                           </tr>
                                           <tr>
                                              <th>Beschreibung</th>
@@ -785,11 +539,11 @@
                                           </tr>
                                           <tr>
                                              <th> GND </th>
-                                             <td><a href="https://d-nb.info/gnd/119527995" target="_blank">https://d-nb.info/gnd/119527995</a></td>
+                                             <td><a href="https://d-nb.info/gnd/118539841" target="_blank">https://d-nb.info/gnd/118539841</a></td>
                                           </tr>
                                           <tr>
                                              <th></th>
-                                             <td style="padding-top: 1em;"><a href="hsl_person_id_101.html"> Weitere Details </a></td>
+                                             <td style="padding-top: 1em;"><a href="hsl_person_id_99.html"> Weitere Details </a></td>
                                           </tr>
                                        </tbody>
                                     </table>
@@ -865,218 +619,6 @@
                               </div>
                            </div>
                         </div>
-                        <div class="modal fade" id="hsl_person_id_1632" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Achilleus" aria-hidden="true">
-                           <div class="modal-dialog modal-dialog-centered">
-                              <div class="modal-content">
-                                 <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Achilleus</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                                 <div class="modal-body">
-                                    <table>
-                                       <tbody>
-                                          <tr>
-                                             <th> Name (alt) </th>
-                                             <td>Achilles / Achill</td>
-                                          </tr>
-                                          <tr>
-                                             <th>Beschreibung</th>
-                                             <td>
-                                                <ul>
-                                                   <li>Sagenfigur</li>
-                                                </ul>
-                                             </td>
-                                          </tr>
-                                          <tr>
-                                             <th> GND </th>
-                                             <td><a href="https://d-nb.info/gnd/118500384" target="_blank">https://d-nb.info/gnd/118500384</a></td>
-                                          </tr>
-                                          <tr>
-                                             <th></th>
-                                             <td style="padding-top: 1em;"><a href="hsl_person_id_1632.html"> Weitere Details </a></td>
-                                          </tr>
-                                       </tbody>
-                                    </table>
-                                 </div>
-                                 <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="modal fade" id="hsl_person_id_475" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Don Giovanni" aria-hidden="true">
-                           <div class="modal-dialog modal-dialog-centered">
-                              <div class="modal-content">
-                                 <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Don Giovanni</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                                 <div class="modal-body">
-                                    <table>
-                                       <tbody>
-                                          <tr>
-                                             <th> Name (alt) </th>
-                                             <td>Don Juan</td>
-                                          </tr>
-                                          <tr>
-                                             <th>Werk</th>
-                                             <td>
-                                                <ul>
-                                                   <li>Il dissoluto punito ossia Il Don Giovanni, KV527</li>
-                                                </ul>
-                                             </td>
-                                          </tr>
-                                          <tr>
-                                             <th> GND </th>
-                                             <td><a href="" target="_blank"></a></td>
-                                          </tr>
-                                          <tr>
-                                             <th></th>
-                                             <td style="padding-top: 1em;"><a href="hsl_person_id_475.html"> Weitere Details </a></td>
-                                          </tr>
-                                       </tbody>
-                                    </table>
-                                 </div>
-                                 <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="modal fade" id="hsl_person_id_100" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Goethe, Johann Wolfgang von" aria-hidden="true">
-                           <div class="modal-dialog modal-dialog-centered">
-                              <div class="modal-content">
-                                 <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Goethe, Johann Wolfgang von</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                                 <div class="modal-body">
-                                    <table>
-                                       <tbody>
-                                          <tr>
-                                             <th>Lebensdaten</th>
-                                             <td>1749-1832</td>
-                                          </tr>
-                                          <tr>
-                                             <th>Beschreibung</th>
-                                             <td>
-                                                <ul>
-                                                   <li>Schriftsteller</li>
-                                                   <li>Politiker</li>
-                                                   <li>Wissenschaftler</li>
-                                                </ul>
-                                             </td>
-                                          </tr>
-                                          <tr>
-                                             <th> GND </th>
-                                             <td><a href="https://d-nb.info/gnd/118540238" target="_blank">https://d-nb.info/gnd/118540238</a></td>
-                                          </tr>
-                                          <tr>
-                                             <th></th>
-                                             <td style="padding-top: 1em;"><a href="hsl_person_id_100.html"> Weitere Details </a></td>
-                                          </tr>
-                                       </tbody>
-                                    </table>
-                                 </div>
-                                 <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="modal fade" id="hsl_person_id_1049" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Reichmann, Theodor" aria-hidden="true">
-                           <div class="modal-dialog modal-dialog-centered">
-                              <div class="modal-content">
-                                 <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Reichmann, Theodor</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                                 <div class="modal-body">
-                                    <table>
-                                       <tbody>
-                                          <tr>
-                                             <th>Lebensdaten</th>
-                                             <td>1849-1903</td>
-                                          </tr>
-                                          <tr>
-                                             <th>Beschreibung</th>
-                                             <td>
-                                                <ul>
-                                                   <li>Sänger (Bariton)</li>
-                                                </ul>
-                                             </td>
-                                          </tr>
-                                          <tr>
-                                             <th> GND </th>
-                                             <td><a href="https://d-nb.info/gnd/116402822" target="_blank">https://d-nb.info/gnd/116402822</a></td>
-                                          </tr>
-                                          <tr>
-                                             <th></th>
-                                             <td style="padding-top: 1em;"><a href="hsl_person_id_1049.html"> Weitere Details </a></td>
-                                          </tr>
-                                       </tbody>
-                                    </table>
-                                 </div>
-                                 <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="modal fade" id="hsl_person_id_1731" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Achilles" aria-hidden="true">
-                           <div class="modal-dialog modal-dialog-centered">
-                              <div class="modal-content">
-                                 <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Achilles</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                                 <div class="modal-body">
-                                    <table>
-                                       <tbody>
-                                          <tr>
-                                             <th> Name (alt) </th>
-                                             <td>Achill</td>
-                                          </tr>
-                                          <tr>
-                                             <th>Werk</th>
-                                             <td>
-                                                <ul>
-                                                   <li>Die Kriegsgefangene</li>
-                                                </ul>
-                                             </td>
-                                          </tr>
-                                          <tr>
-                                             <th> GND </th>
-                                             <td><a href="" target="_blank"></a></td>
-                                          </tr>
-                                          <tr>
-                                             <th></th>
-                                             <td style="padding-top: 1em;"><a href="hsl_person_id_1731.html"> Weitere Details </a></td>
-                                          </tr>
-                                       </tbody>
-                                    </table>
-                                 </div>
-                                 <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="modal fade" id="hsl_person_id_1734" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Patroklos" aria-hidden="true">
-                           <div class="modal-dialog modal-dialog-centered">
-                              <div class="modal-content">
-                                 <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Patroklos</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                                 <div class="modal-body">
-                                    <table>
-                                       <tbody>
-                                          <tr>
-                                             <th> Name (alt) </th>
-                                             <td>Patroklus</td>
-                                          </tr>
-                                          <tr>
-                                             <th>Beschreibung</th>
-                                             <td>
-                                                <ul>
-                                                   <li>Sagenfigur</li>
-                                                </ul>
-                                             </td>
-                                          </tr>
-                                          <tr>
-                                             <th> GND </th>
-                                             <td><a href="https://d-nb.info/gnd/118803271" target="_blank">https://d-nb.info/gnd/118803271</a></td>
-                                          </tr>
-                                          <tr>
-                                             <th></th>
-                                             <td style="padding-top: 1em;"><a href="hsl_person_id_1734.html"> Weitere Details </a></td>
-                                          </tr>
-                                       </tbody>
-                                    </table>
-                                 </div>
-                                 <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
-                              </div>
-                           </div>
-                        </div>
                         <div class="modal fade" id="hsl_person_id_1733" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Homerus" aria-hidden="true">
                            <div class="modal-dialog modal-dialog-centered">
                               <div class="modal-content">
@@ -1112,140 +654,6 @@
                               </div>
                            </div>
                         </div>
-                        <div class="modal fade" id="hsl_person_id_1740" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Briseis" aria-hidden="true">
-                           <div class="modal-dialog modal-dialog-centered">
-                              <div class="modal-content">
-                                 <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Briseis</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                                 <div class="modal-body">
-                                    <table>
-                                       <tbody>
-                                          <tr>
-                                             <th>Beschreibung</th>
-                                             <td>
-                                                <ul>
-                                                   <li>Sagenfigur</li>
-                                                </ul>
-                                             </td>
-                                          </tr>
-                                          <tr>
-                                             <th> GND </th>
-                                             <td><a href="https://d-nb.info/gnd/124566685" target="_blank">https://d-nb.info/gnd/124566685</a></td>
-                                          </tr>
-                                          <tr>
-                                             <th></th>
-                                             <td style="padding-top: 1em;"><a href="hsl_person_id_1740.html"> Weitere Details </a></td>
-                                          </tr>
-                                       </tbody>
-                                    </table>
-                                 </div>
-                                 <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="modal fade" id="hsl_person_id_533" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Fidès" aria-hidden="true">
-                           <div class="modal-dialog modal-dialog-centered">
-                              <div class="modal-content">
-                                 <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Fidès</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                                 <div class="modal-body">
-                                    <table>
-                                       <tbody>
-                                          <tr>
-                                             <th> Name (alt) </th>
-                                             <td>Fides</td>
-                                          </tr>
-                                          <tr>
-                                             <th>Werk</th>
-                                             <td>
-                                                <ul>
-                                                   <li>Le prophète</li>
-                                                </ul>
-                                             </td>
-                                          </tr>
-                                          <tr>
-                                             <th> GND </th>
-                                             <td><a href="" target="_blank"></a></td>
-                                          </tr>
-                                          <tr>
-                                             <th></th>
-                                             <td style="padding-top: 1em;"><a href="hsl_person_id_533.html"> Weitere Details </a></td>
-                                          </tr>
-                                       </tbody>
-                                    </table>
-                                 </div>
-                                 <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="modal fade" id="hsl_person_id_116" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Heine, Heinrich" aria-hidden="true">
-                           <div class="modal-dialog modal-dialog-centered">
-                              <div class="modal-content">
-                                 <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Heine, Heinrich</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                                 <div class="modal-body">
-                                    <table>
-                                       <tbody>
-                                          <tr>
-                                             <th>Lebensdaten</th>
-                                             <td>1797-1856</td>
-                                          </tr>
-                                          <tr>
-                                             <th>Beschreibung</th>
-                                             <td>
-                                                <ul>
-                                                   <li>Schriftsteller</li>
-                                                   <li>Journalist</li>
-                                                   <li>Kritiker</li>
-                                                </ul>
-                                             </td>
-                                          </tr>
-                                          <tr>
-                                             <th> GND </th>
-                                             <td><a href="https://d-nb.info/gnd/118548018" target="_blank">https://d-nb.info/gnd/118548018</a></td>
-                                          </tr>
-                                          <tr>
-                                             <th></th>
-                                             <td style="padding-top: 1em;"><a href="hsl_person_id_116.html"> Weitere Details </a></td>
-                                          </tr>
-                                       </tbody>
-                                    </table>
-                                 </div>
-                                 <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="modal fade" id="hsl_person_id_1741" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Brises" aria-hidden="true">
-                           <div class="modal-dialog modal-dialog-centered">
-                              <div class="modal-content">
-                                 <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Brises</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                                 <div class="modal-body">
-                                    <table>
-                                       <tbody>
-                                          <tr>
-                                             <th>Werk</th>
-                                             <td>
-                                                <ul>
-                                                   <li>Ilias</li>
-                                                </ul>
-                                             </td>
-                                          </tr>
-                                          <tr>
-                                             <th> GND </th>
-                                             <td><a href="" target="_blank"></a></td>
-                                          </tr>
-                                          <tr>
-                                             <th></th>
-                                             <td style="padding-top: 1em;"><a href="hsl_person_id_1741.html"> Weitere Details </a></td>
-                                          </tr>
-                                       </tbody>
-                                    </table>
-                                 </div>
-                                 <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
-                              </div>
-                           </div>
-                        </div>
                         <div class="modal fade" id="hsl_person_id_1744" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Agamemnon" aria-hidden="true">
                            <div class="modal-dialog modal-dialog-centered">
                               <div class="modal-content">
@@ -1269,226 +677,6 @@
                                           <tr>
                                              <th></th>
                                              <td style="padding-top: 1em;"><a href="hsl_person_id_1744.html"> Weitere Details </a></td>
-                                          </tr>
-                                       </tbody>
-                                    </table>
-                                 </div>
-                                 <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="modal fade" id="hsl_person_id_1730" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Formey, Alfred" aria-hidden="true">
-                           <div class="modal-dialog modal-dialog-centered">
-                              <div class="modal-content">
-                                 <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Formey, Alfred</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                                 <div class="modal-body">
-                                    <table>
-                                       <tbody>
-                                          <tr>
-                                             <th> Name (alt) </th>
-                                             <td>Schlicht, Emil</td>
-                                          </tr>
-                                          <tr>
-                                             <th>Lebensdaten</th>
-                                             <td>1844-1901</td>
-                                          </tr>
-                                          <tr>
-                                             <th>Beschreibung</th>
-                                             <td>
-                                                <ul>
-                                                   <li>Pfarrer</li>
-                                                   <li>Schriftsteller</li>
-                                                </ul>
-                                             </td>
-                                          </tr>
-                                          <tr>
-                                             <th> GND </th>
-                                             <td><a href="https://d-nb.info/gnd/144033372" target="_blank">https://d-nb.info/gnd/144033372</a></td>
-                                          </tr>
-                                          <tr>
-                                             <th></th>
-                                             <td style="padding-top: 1em;"><a href="hsl_person_id_1730.html"> Weitere Details </a></td>
-                                          </tr>
-                                       </tbody>
-                                    </table>
-                                 </div>
-                                 <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="modal fade" id="hsl_person_id_28" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Berlioz, Hector" aria-hidden="true">
-                           <div class="modal-dialog modal-dialog-centered">
-                              <div class="modal-content">
-                                 <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Berlioz, Hector</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                                 <div class="modal-body">
-                                    <table>
-                                       <tbody>
-                                          <tr>
-                                             <th> Name (alt) </th>
-                                             <td>Berlioz, Hektor</td>
-                                          </tr>
-                                          <tr>
-                                             <th>Lebensdaten</th>
-                                             <td>1803-1869</td>
-                                          </tr>
-                                          <tr>
-                                             <th>Beschreibung</th>
-                                             <td>
-                                                <ul>
-                                                   <li>Komponist</li>
-                                                   <li>Musikautor</li>
-                                                   <li>Kritiker</li>
-                                                </ul>
-                                             </td>
-                                          </tr>
-                                          <tr>
-                                             <th> GND </th>
-                                             <td><a href="https://d-nb.info/gnd/118509675" target="_blank">https://d-nb.info/gnd/118509675</a></td>
-                                          </tr>
-                                          <tr>
-                                             <th></th>
-                                             <td style="padding-top: 1em;"><a href="hsl_person_id_28.html"> Weitere Details </a></td>
-                                          </tr>
-                                       </tbody>
-                                    </table>
-                                 </div>
-                                 <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="modal fade" id="hsl_person_id_1726" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Sarastro" aria-hidden="true">
-                           <div class="modal-dialog modal-dialog-centered">
-                              <div class="modal-content">
-                                 <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Sarastro</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                                 <div class="modal-body">
-                                    <table>
-                                       <tbody>
-                                          <tr>
-                                             <th>Werk</th>
-                                             <td>
-                                                <ul>
-                                                   <li>Die Zauberflöte, KV620</li>
-                                                </ul>
-                                             </td>
-                                          </tr>
-                                          <tr>
-                                             <th> GND </th>
-                                             <td><a href="" target="_blank"></a></td>
-                                          </tr>
-                                          <tr>
-                                             <th></th>
-                                             <td style="padding-top: 1em;"><a href="hsl_person_id_1726.html"> Weitere Details </a></td>
-                                          </tr>
-                                       </tbody>
-                                    </table>
-                                 </div>
-                                 <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="modal fade" id="hsl_person_id_1433" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Hesch, Wilhelm" aria-hidden="true">
-                           <div class="modal-dialog modal-dialog-centered">
-                              <div class="modal-content">
-                                 <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Hesch, Wilhelm</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                                 <div class="modal-body">
-                                    <table>
-                                       <tbody>
-                                          <tr>
-                                             <th>Lebensdaten</th>
-                                             <td>1860-1908</td>
-                                          </tr>
-                                          <tr>
-                                             <th>Beschreibung</th>
-                                             <td>
-                                                <ul>
-                                                   <li>Sänger (Bassist)</li>
-                                                   <li>Schauspieler</li>
-                                                </ul>
-                                             </td>
-                                          </tr>
-                                          <tr>
-                                             <th> GND </th>
-                                             <td><a href="https://d-nb.info/gnd/12962537X" target="_blank">https://d-nb.info/gnd/12962537X</a></td>
-                                          </tr>
-                                          <tr>
-                                             <th></th>
-                                             <td style="padding-top: 1em;"><a href="hsl_person_id_1433.html"> Weitere Details </a></td>
-                                          </tr>
-                                       </tbody>
-                                    </table>
-                                 </div>
-                                 <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="modal fade" id="hsl_person_id_319" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Wagner, Richard" aria-hidden="true">
-                           <div class="modal-dialog modal-dialog-centered">
-                              <div class="modal-content">
-                                 <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Wagner, Richard</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                                 <div class="modal-body">
-                                    <table>
-                                       <tbody>
-                                          <tr>
-                                             <th>Lebensdaten</th>
-                                             <td>1813-1883</td>
-                                          </tr>
-                                          <tr>
-                                             <th>Beschreibung</th>
-                                             <td>
-                                                <ul>
-                                                   <li>Komponist</li>
-                                                   <li>Schriftsteller</li>
-                                                   <li>Theaterdirektor</li>
-                                                </ul>
-                                             </td>
-                                          </tr>
-                                          <tr>
-                                             <th> GND </th>
-                                             <td><a href="https://d-nb.info/gnd/118594117" target="_blank">https://d-nb.info/gnd/118594117</a></td>
-                                          </tr>
-                                          <tr>
-                                             <th></th>
-                                             <td style="padding-top: 1em;"><a href="hsl_person_id_319.html"> Weitere Details </a></td>
-                                          </tr>
-                                       </tbody>
-                                    </table>
-                                 </div>
-                                 <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="modal fade" id="hsl_person_id_235" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Renard, Marie" aria-hidden="true">
-                           <div class="modal-dialog modal-dialog-centered">
-                              <div class="modal-content">
-                                 <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Renard, Marie</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                                 <div class="modal-body">
-                                    <table>
-                                       <tbody>
-                                          <tr>
-                                             <th>Lebensdaten</th>
-                                             <td>1864-1939</td>
-                                          </tr>
-                                          <tr>
-                                             <th>Beschreibung</th>
-                                             <td>
-                                                <ul>
-                                                   <li>Sängerin (Mezzo-Sopran)</li>
-                                                </ul>
-                                             </td>
-                                          </tr>
-                                          <tr>
-                                             <th> GND </th>
-                                             <td><a href="https://d-nb.info/gnd/116438037" target="_blank">https://d-nb.info/gnd/116438037</a></td>
-                                          </tr>
-                                          <tr>
-                                             <th></th>
-                                             <td style="padding-top: 1em;"><a href="hsl_person_id_235.html"> Weitere Details </a></td>
                                           </tr>
                                        </tbody>
                                     </table>
@@ -1536,14 +724,53 @@
                               </div>
                            </div>
                         </div>
-                        <div class="modal fade" id="hsl_person_id_553" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Hektor" aria-hidden="true">
+                        <div class="modal fade" id="hsl_person_id_1731" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Achilles" aria-hidden="true">
                            <div class="modal-dialog modal-dialog-centered">
                               <div class="modal-content">
                                  <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Hektor</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Achilles</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
                                  <div class="modal-body">
                                     <table>
                                        <tbody>
+                                          <tr>
+                                             <th> Name (alt) </th>
+                                             <td>Achill</td>
+                                          </tr>
+                                          <tr>
+                                             <th>Werk</th>
+                                             <td>
+                                                <ul>
+                                                   <li>Die Kriegsgefangene</li>
+                                                </ul>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <th> GND </th>
+                                             <td><a href="" target="_blank"></a></td>
+                                          </tr>
+                                          <tr>
+                                             <th></th>
+                                             <td style="padding-top: 1em;"><a href="hsl_person_id_1731.html"> Weitere Details </a></td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </div>
+                                 <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="modal fade" id="hsl_person_id_1632" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Achilleus" aria-hidden="true">
+                           <div class="modal-dialog modal-dialog-centered">
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Achilleus</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                                 <div class="modal-body">
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <th> Name (alt) </th>
+                                             <td>Achilles / Achill</td>
+                                          </tr>
                                           <tr>
                                              <th>Beschreibung</th>
                                              <td>
@@ -1554,11 +781,135 @@
                                           </tr>
                                           <tr>
                                              <th> GND </th>
-                                             <td><a href="https://d-nb.info/gnd/119291002" target="_blank">https://d-nb.info/gnd/119291002</a></td>
+                                             <td><a href="https://d-nb.info/gnd/118500384" target="_blank">https://d-nb.info/gnd/118500384</a></td>
                                           </tr>
                                           <tr>
                                              <th></th>
-                                             <td style="padding-top: 1em;"><a href="hsl_person_id_553.html"> Weitere Details </a></td>
+                                             <td style="padding-top: 1em;"><a href="hsl_person_id_1632.html"> Weitere Details </a></td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </div>
+                                 <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="modal fade" id="hsl_person_id_1046" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Hans Heiling" aria-hidden="true">
+                           <div class="modal-dialog modal-dialog-centered">
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Hans Heiling</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                                 <div class="modal-body">
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <th>Werk</th>
+                                             <td>
+                                                <ul>
+                                                   <li>Hans Heiling, op. 80</li>
+                                                </ul>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <th> GND </th>
+                                             <td><a href="" target="_blank"></a></td>
+                                          </tr>
+                                          <tr>
+                                             <th></th>
+                                             <td style="padding-top: 1em;"><a href="hsl_person_id_1046.html"> Weitere Details </a></td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </div>
+                                 <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="modal fade" id="hsl_person_id_1743" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Amneris" aria-hidden="true">
+                           <div class="modal-dialog modal-dialog-centered">
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Amneris</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                                 <div class="modal-body">
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <th>Werk</th>
+                                             <td>
+                                                <ul>
+                                                   <li>Aida, H62</li>
+                                                </ul>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <th> GND </th>
+                                             <td><a href="" target="_blank"></a></td>
+                                          </tr>
+                                          <tr>
+                                             <th></th>
+                                             <td style="padding-top: 1em;"><a href="hsl_person_id_1743.html"> Weitere Details </a></td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </div>
+                                 <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="modal fade" id="hsl_person_id_1741" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Brises" aria-hidden="true">
+                           <div class="modal-dialog modal-dialog-centered">
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Brises</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                                 <div class="modal-body">
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <th>Werk</th>
+                                             <td>
+                                                <ul>
+                                                   <li>Ilias</li>
+                                                </ul>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <th> GND </th>
+                                             <td><a href="" target="_blank"></a></td>
+                                          </tr>
+                                          <tr>
+                                             <th></th>
+                                             <td style="padding-top: 1em;"><a href="hsl_person_id_1741.html"> Weitere Details </a></td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </div>
+                                 <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="modal fade" id="hsl_person_id_1726" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Sarastro" aria-hidden="true">
+                           <div class="modal-dialog modal-dialog-centered">
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Sarastro</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                                 <div class="modal-body">
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <th>Werk</th>
+                                             <td>
+                                                <ul>
+                                                   <li>Die Zauberflöte, KV620</li>
+                                                </ul>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <th> GND </th>
+                                             <td><a href="" target="_blank"></a></td>
+                                          </tr>
+                                          <tr>
+                                             <th></th>
+                                             <td style="padding-top: 1em;"><a href="hsl_person_id_1726.html"> Weitere Details </a></td>
                                           </tr>
                                        </tbody>
                                     </table>
@@ -1642,29 +993,34 @@
                               </div>
                            </div>
                         </div>
-                        <div class="modal fade" id="hsl_person_id_1046" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Hans Heiling" aria-hidden="true">
+                        <div class="modal fade" id="hsl_person_id_1728" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Bungert, August" aria-hidden="true">
                            <div class="modal-dialog modal-dialog-centered">
                               <div class="modal-content">
                                  <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Hans Heiling</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Bungert, August</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
                                  <div class="modal-body">
                                     <table>
                                        <tbody>
                                           <tr>
-                                             <th>Werk</th>
+                                             <th>Lebensdaten</th>
+                                             <td>1845-1915</td>
+                                          </tr>
+                                          <tr>
+                                             <th>Beschreibung</th>
                                              <td>
                                                 <ul>
-                                                   <li>Hans Heiling, op. 80</li>
+                                                   <li>Komponist</li>
+                                                   <li>Schriftsteller</li>
                                                 </ul>
                                              </td>
                                           </tr>
                                           <tr>
                                              <th> GND </th>
-                                             <td><a href="" target="_blank"></a></td>
+                                             <td><a href="https://d-nb.info/gnd/118667998" target="_blank">https://d-nb.info/gnd/118667998</a></td>
                                           </tr>
                                           <tr>
                                              <th></th>
-                                             <td style="padding-top: 1em;"><a href="hsl_person_id_1046.html"> Weitere Details </a></td>
+                                             <td style="padding-top: 1em;"><a href="hsl_person_id_1728.html"> Weitere Details </a></td>
                                           </tr>
                                        </tbody>
                                     </table>
@@ -1673,17 +1029,48 @@
                               </div>
                            </div>
                         </div>
-                        <div class="modal fade" id="hsl_person_id_99" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Gluck, Christoph Willibald" aria-hidden="true">
+                        <div class="modal fade" id="hsl_person_id_1736" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Hermes" aria-hidden="true">
                            <div class="modal-dialog modal-dialog-centered">
                               <div class="modal-content">
                                  <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Gluck, Christoph Willibald</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Hermes</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                                 <div class="modal-body">
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <th>Beschreibung</th>
+                                             <td>
+                                                <ul>
+                                                   <li>Gottheit</li>
+                                                </ul>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <th> GND </th>
+                                             <td><a href="https://d-nb.info/gnd/118639560" target="_blank">https://d-nb.info/gnd/118639560</a></td>
+                                          </tr>
+                                          <tr>
+                                             <th></th>
+                                             <td style="padding-top: 1em;"><a href="hsl_person_id_1736.html"> Weitere Details </a></td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </div>
+                                 <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="modal fade" id="hsl_person_id_101" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Goldmark, Karl" aria-hidden="true">
+                           <div class="modal-dialog modal-dialog-centered">
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Goldmark, Karl</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
                                  <div class="modal-body">
                                     <table>
                                        <tbody>
                                           <tr>
                                              <th>Lebensdaten</th>
-                                             <td>1714-1787</td>
+                                             <td>1830-1915</td>
                                           </tr>
                                           <tr>
                                              <th>Beschreibung</th>
@@ -1695,11 +1082,625 @@
                                           </tr>
                                           <tr>
                                              <th> GND </th>
-                                             <td><a href="https://d-nb.info/gnd/118539841" target="_blank">https://d-nb.info/gnd/118539841</a></td>
+                                             <td><a href="https://d-nb.info/gnd/119527995" target="_blank">https://d-nb.info/gnd/119527995</a></td>
                                           </tr>
                                           <tr>
                                              <th></th>
-                                             <td style="padding-top: 1em;"><a href="hsl_person_id_99.html"> Weitere Details </a></td>
+                                             <td style="padding-top: 1em;"><a href="hsl_person_id_101.html"> Weitere Details </a></td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </div>
+                                 <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="modal fade" id="hsl_person_id_1737" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Priamus" aria-hidden="true">
+                           <div class="modal-dialog modal-dialog-centered">
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Priamus</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                                 <div class="modal-body">
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <th>Werk</th>
+                                             <td>
+                                                <ul>
+                                                   <li>Die Kriegsgefangene</li>
+                                                </ul>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <th> GND </th>
+                                             <td><a href="" target="_blank"></a></td>
+                                          </tr>
+                                          <tr>
+                                             <th></th>
+                                             <td style="padding-top: 1em;"><a href="hsl_person_id_1737.html"> Weitere Details </a></td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </div>
+                                 <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="modal fade" id="hsl_person_id_1433" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Hesch, Wilhelm" aria-hidden="true">
+                           <div class="modal-dialog modal-dialog-centered">
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Hesch, Wilhelm</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                                 <div class="modal-body">
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <th>Lebensdaten</th>
+                                             <td>1860-1908</td>
+                                          </tr>
+                                          <tr>
+                                             <th>Beschreibung</th>
+                                             <td>
+                                                <ul>
+                                                   <li>Sänger (Bassist)</li>
+                                                   <li>Schauspieler</li>
+                                                </ul>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <th> GND </th>
+                                             <td><a href="https://d-nb.info/gnd/12962537X" target="_blank">https://d-nb.info/gnd/12962537X</a></td>
+                                          </tr>
+                                          <tr>
+                                             <th></th>
+                                             <td style="padding-top: 1em;"><a href="hsl_person_id_1433.html"> Weitere Details </a></td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </div>
+                                 <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="modal fade" id="hsl_person_id_1732" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Briseïs" aria-hidden="true">
+                           <div class="modal-dialog modal-dialog-centered">
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Briseïs</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                                 <div class="modal-body">
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <th>Werk</th>
+                                             <td>
+                                                <ul>
+                                                   <li>Die Kriegsgefangene</li>
+                                                </ul>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <th> GND </th>
+                                             <td><a href="" target="_blank"></a></td>
+                                          </tr>
+                                          <tr>
+                                             <th></th>
+                                             <td style="padding-top: 1em;"><a href="hsl_person_id_1732.html"> Weitere Details </a></td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </div>
+                                 <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="modal fade" id="hsl_person_id_1730" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Formey, Alfred" aria-hidden="true">
+                           <div class="modal-dialog modal-dialog-centered">
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Formey, Alfred</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                                 <div class="modal-body">
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <th> Name (alt) </th>
+                                             <td>Schlicht, Emil</td>
+                                          </tr>
+                                          <tr>
+                                             <th>Lebensdaten</th>
+                                             <td>1844-1901</td>
+                                          </tr>
+                                          <tr>
+                                             <th>Beschreibung</th>
+                                             <td>
+                                                <ul>
+                                                   <li>Pfarrer</li>
+                                                   <li>Schriftsteller</li>
+                                                </ul>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <th> GND </th>
+                                             <td><a href="https://d-nb.info/gnd/144033372" target="_blank">https://d-nb.info/gnd/144033372</a></td>
+                                          </tr>
+                                          <tr>
+                                             <th></th>
+                                             <td style="padding-top: 1em;"><a href="hsl_person_id_1730.html"> Weitere Details </a></td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </div>
+                                 <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="modal fade" id="hsl_person_id_1739" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Idäus" aria-hidden="true">
+                           <div class="modal-dialog modal-dialog-centered">
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Idäus</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                                 <div class="modal-body">
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <th>Werk</th>
+                                             <td>
+                                                <ul>
+                                                   <li>Die Kriegsgefangene</li>
+                                                </ul>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <th> GND </th>
+                                             <td><a href="" target="_blank"></a></td>
+                                          </tr>
+                                          <tr>
+                                             <th></th>
+                                             <td style="padding-top: 1em;"><a href="hsl_person_id_1739.html"> Weitere Details </a></td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </div>
+                                 <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="modal fade" id="hsl_person_id_533" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Fidès" aria-hidden="true">
+                           <div class="modal-dialog modal-dialog-centered">
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Fidès</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                                 <div class="modal-body">
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <th> Name (alt) </th>
+                                             <td>Fides</td>
+                                          </tr>
+                                          <tr>
+                                             <th>Werk</th>
+                                             <td>
+                                                <ul>
+                                                   <li>Le prophète</li>
+                                                </ul>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <th> GND </th>
+                                             <td><a href="" target="_blank"></a></td>
+                                          </tr>
+                                          <tr>
+                                             <th></th>
+                                             <td style="padding-top: 1em;"><a href="hsl_person_id_533.html"> Weitere Details </a></td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </div>
+                                 <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="modal fade" id="hsl_person_id_28" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Berlioz, Hector" aria-hidden="true">
+                           <div class="modal-dialog modal-dialog-centered">
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Berlioz, Hector</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                                 <div class="modal-body">
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <th> Name (alt) </th>
+                                             <td>Berlioz, Hektor</td>
+                                          </tr>
+                                          <tr>
+                                             <th>Lebensdaten</th>
+                                             <td>1803-1869</td>
+                                          </tr>
+                                          <tr>
+                                             <th>Beschreibung</th>
+                                             <td>
+                                                <ul>
+                                                   <li>Komponist</li>
+                                                   <li>Musikautor</li>
+                                                   <li>Kritiker</li>
+                                                </ul>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <th> GND </th>
+                                             <td><a href="https://d-nb.info/gnd/118509675" target="_blank">https://d-nb.info/gnd/118509675</a></td>
+                                          </tr>
+                                          <tr>
+                                             <th></th>
+                                             <td style="padding-top: 1em;"><a href="hsl_person_id_28.html"> Weitere Details </a></td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </div>
+                                 <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="modal fade" id="hsl_person_id_1734" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Patroklos" aria-hidden="true">
+                           <div class="modal-dialog modal-dialog-centered">
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Patroklos</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                                 <div class="modal-body">
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <th> Name (alt) </th>
+                                             <td>Patroklus</td>
+                                          </tr>
+                                          <tr>
+                                             <th>Beschreibung</th>
+                                             <td>
+                                                <ul>
+                                                   <li>Sagenfigur</li>
+                                                </ul>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <th> GND </th>
+                                             <td><a href="https://d-nb.info/gnd/118803271" target="_blank">https://d-nb.info/gnd/118803271</a></td>
+                                          </tr>
+                                          <tr>
+                                             <th></th>
+                                             <td style="padding-top: 1em;"><a href="hsl_person_id_1734.html"> Weitere Details </a></td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </div>
+                                 <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="modal fade" id="hsl_person_id_235" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Renard, Marie" aria-hidden="true">
+                           <div class="modal-dialog modal-dialog-centered">
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Renard, Marie</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                                 <div class="modal-body">
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <th>Lebensdaten</th>
+                                             <td>1864-1939</td>
+                                          </tr>
+                                          <tr>
+                                             <th>Beschreibung</th>
+                                             <td>
+                                                <ul>
+                                                   <li>Sängerin (Mezzo-Sopran)</li>
+                                                </ul>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <th> GND </th>
+                                             <td><a href="https://d-nb.info/gnd/116438037" target="_blank">https://d-nb.info/gnd/116438037</a></td>
+                                          </tr>
+                                          <tr>
+                                             <th></th>
+                                             <td style="padding-top: 1em;"><a href="hsl_person_id_235.html"> Weitere Details </a></td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </div>
+                                 <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="modal fade" id="hsl_person_id_977" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Mahler, Gustav" aria-hidden="true">
+                           <div class="modal-dialog modal-dialog-centered">
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Mahler, Gustav</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                                 <div class="modal-body">
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <th> GND </th>
+                                             <td><a href="https://d-nb.info/gnd/118576291" target="_blank">https://d-nb.info/gnd/118576291</a></td>
+                                          </tr>
+                                          <tr>
+                                             <th></th>
+                                             <td style="padding-top: 1em;"><a href="hsl_person_id_977.html"> Weitere Details </a></td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </div>
+                                 <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="modal fade" id="hsl_person_id_1727" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Hüon von Bordeaux" aria-hidden="true">
+                           <div class="modal-dialog modal-dialog-centered">
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Hüon von Bordeaux</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                                 <div class="modal-body">
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <th>Werk</th>
+                                             <td>
+                                                <ul>
+                                                   <li>Oberon or The Elf King's Oath, J306</li>
+                                                </ul>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <th> GND </th>
+                                             <td><a href="" target="_blank"></a></td>
+                                          </tr>
+                                          <tr>
+                                             <th></th>
+                                             <td style="padding-top: 1em;"><a href="hsl_person_id_1727.html"> Weitere Details </a></td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </div>
+                                 <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="modal fade" id="hsl_person_id_475" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Don Giovanni" aria-hidden="true">
+                           <div class="modal-dialog modal-dialog-centered">
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Don Giovanni</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                                 <div class="modal-body">
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <th> Name (alt) </th>
+                                             <td>Don Juan</td>
+                                          </tr>
+                                          <tr>
+                                             <th>Werk</th>
+                                             <td>
+                                                <ul>
+                                                   <li>Il dissoluto punito ossia Il Don Giovanni, KV527</li>
+                                                </ul>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <th> GND </th>
+                                             <td><a href="" target="_blank"></a></td>
+                                          </tr>
+                                          <tr>
+                                             <th></th>
+                                             <td style="padding-top: 1em;"><a href="hsl_person_id_475.html"> Weitere Details </a></td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </div>
+                                 <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="modal fade" id="hsl_person_id_100" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Goethe, Johann Wolfgang von" aria-hidden="true">
+                           <div class="modal-dialog modal-dialog-centered">
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Goethe, Johann Wolfgang von</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                                 <div class="modal-body">
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <th>Lebensdaten</th>
+                                             <td>1749-1832</td>
+                                          </tr>
+                                          <tr>
+                                             <th>Beschreibung</th>
+                                             <td>
+                                                <ul>
+                                                   <li>Schriftsteller</li>
+                                                   <li>Politiker</li>
+                                                   <li>Wissenschaftler</li>
+                                                </ul>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <th> GND </th>
+                                             <td><a href="https://d-nb.info/gnd/118540238" target="_blank">https://d-nb.info/gnd/118540238</a></td>
+                                          </tr>
+                                          <tr>
+                                             <th></th>
+                                             <td style="padding-top: 1em;"><a href="hsl_person_id_100.html"> Weitere Details </a></td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </div>
+                                 <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="modal fade" id="hsl_person_id_1740" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Briseis" aria-hidden="true">
+                           <div class="modal-dialog modal-dialog-centered">
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Briseis</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                                 <div class="modal-body">
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <th>Beschreibung</th>
+                                             <td>
+                                                <ul>
+                                                   <li>Sagenfigur</li>
+                                                </ul>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <th> GND </th>
+                                             <td><a href="https://d-nb.info/gnd/124566685" target="_blank">https://d-nb.info/gnd/124566685</a></td>
+                                          </tr>
+                                          <tr>
+                                             <th></th>
+                                             <td style="padding-top: 1em;"><a href="hsl_person_id_1740.html"> Weitere Details </a></td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </div>
+                                 <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="modal fade" id="hsl_person_id_1049" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Reichmann, Theodor" aria-hidden="true">
+                           <div class="modal-dialog modal-dialog-centered">
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Reichmann, Theodor</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                                 <div class="modal-body">
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <th>Lebensdaten</th>
+                                             <td>1849-1903</td>
+                                          </tr>
+                                          <tr>
+                                             <th>Beschreibung</th>
+                                             <td>
+                                                <ul>
+                                                   <li>Sänger (Bariton)</li>
+                                                </ul>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <th> GND </th>
+                                             <td><a href="https://d-nb.info/gnd/116402822" target="_blank">https://d-nb.info/gnd/116402822</a></td>
+                                          </tr>
+                                          <tr>
+                                             <th></th>
+                                             <td style="padding-top: 1em;"><a href="hsl_person_id_1049.html"> Weitere Details </a></td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </div>
+                                 <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="modal fade" id="hsl_person_id_116" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Heine, Heinrich" aria-hidden="true">
+                           <div class="modal-dialog modal-dialog-centered">
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Heine, Heinrich</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                                 <div class="modal-body">
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <th>Lebensdaten</th>
+                                             <td>1797-1856</td>
+                                          </tr>
+                                          <tr>
+                                             <th>Beschreibung</th>
+                                             <td>
+                                                <ul>
+                                                   <li>Schriftsteller</li>
+                                                   <li>Journalist</li>
+                                                   <li>Kritiker</li>
+                                                </ul>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <th> GND </th>
+                                             <td><a href="https://d-nb.info/gnd/118548018" target="_blank">https://d-nb.info/gnd/118548018</a></td>
+                                          </tr>
+                                          <tr>
+                                             <th></th>
+                                             <td style="padding-top: 1em;"><a href="hsl_person_id_116.html"> Weitere Details </a></td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </div>
+                                 <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="modal fade" id="hsl_person_id_215" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Piccinni, Niccolò" aria-hidden="true">
+                           <div class="modal-dialog modal-dialog-centered">
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Piccinni, Niccolò</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                                 <div class="modal-body">
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <th> Name (alt) </th>
+                                             <td>Picinni / Piccini</td>
+                                          </tr>
+                                          <tr>
+                                             <th>Lebensdaten</th>
+                                             <td>1728-1800</td>
+                                          </tr>
+                                          <tr>
+                                             <th>Beschreibung</th>
+                                             <td>
+                                                <ul>
+                                                   <li>Komponist</li>
+                                                </ul>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <th> GND </th>
+                                             <td><a href="https://d-nb.info/gnd/119314061" target="_blank">https://d-nb.info/gnd/119314061</a></td>
+                                          </tr>
+                                          <tr>
+                                             <th></th>
+                                             <td style="padding-top: 1em;"><a href="hsl_person_id_215.html"> Weitere Details </a></td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </div>
+                                 <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="modal fade" id="hsl_person_id_1725" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Agamemnon" aria-hidden="true">
+                           <div class="modal-dialog modal-dialog-centered">
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Agamemnon</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                                 <div class="modal-body">
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <th>Beschreibung</th>
+                                             <td>
+                                                <ul>
+                                                   <li>Sagenfigur</li>
+                                                </ul>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <th> GND </th>
+                                             <td><a href="https://d-nb.info/gnd/119059738" target="_blank">https://d-nb.info/gnd/119059738</a></td>
+                                          </tr>
+                                          <tr>
+                                             <th></th>
+                                             <td style="padding-top: 1em;"><a href="hsl_person_id_1725.html"> Weitere Details </a></td>
                                           </tr>
                                        </tbody>
                                     </table>
@@ -1739,68 +1740,6 @@
                               </div>
                            </div>
                         </div>
-                        <div class="modal fade" id="hsl_place_id_44" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Paris" aria-hidden="true">
-                           <div class="modal-dialog modal-dialog-centered">
-                              <div class="modal-content">
-                                 <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Paris</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                                 <div class="modal-body">
-                                    <table>
-                                       <tbody>
-                                          <tr>
-                                             <th> Alternativname </th>
-                                             <td></td>
-                                          </tr>
-                                          <tr>
-                                             <th> Land </th>
-                                             <td>FR, France</td>
-                                          </tr>
-                                          <tr>
-                                             <th> Geonames ID </th>
-                                             <td><a href="https://sws.geonames.org/2988507/" target="_blank">2988507</a></td>
-                                          </tr>
-                                          <tr>
-                                             <th></th>
-                                             <td style="padding-top: 1em;"><a href="hsl_place_id_44.html"> Weitere Details </a></td>
-                                          </tr>
-                                       </tbody>
-                                    </table>
-                                 </div>
-                                 <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="modal fade" id="hsl_place_id_52" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Troja" aria-hidden="true">
-                           <div class="modal-dialog modal-dialog-centered">
-                              <div class="modal-content">
-                                 <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Troja</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                                 <div class="modal-body">
-                                    <table>
-                                       <tbody>
-                                          <tr>
-                                             <th> Alternativname </th>
-                                             <td></td>
-                                          </tr>
-                                          <tr>
-                                             <th> Land </th>
-                                             <td>TR, Turkey</td>
-                                          </tr>
-                                          <tr>
-                                             <th> Geonames ID </th>
-                                             <td><a href="https://sws.geonames.org/298885/" target="_blank">298885</a></td>
-                                          </tr>
-                                          <tr>
-                                             <th></th>
-                                             <td style="padding-top: 1em;"><a href="hsl_place_id_52.html"> Weitere Details </a></td>
-                                          </tr>
-                                       </tbody>
-                                    </table>
-                                 </div>
-                                 <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
-                              </div>
-                           </div>
-                        </div>
                         <div class="modal fade" id="hsl_place_id_14" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Deutschland" aria-hidden="true">
                            <div class="modal-dialog modal-dialog-centered">
                               <div class="modal-content">
@@ -1824,6 +1763,37 @@
                                           <tr>
                                              <th></th>
                                              <td style="padding-top: 1em;"><a href="hsl_place_id_14.html"> Weitere Details </a></td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </div>
+                                 <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="modal fade" id="hsl_place_id_44" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Paris" aria-hidden="true">
+                           <div class="modal-dialog modal-dialog-centered">
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Paris</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                                 <div class="modal-body">
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <th> Alternativname </th>
+                                             <td></td>
+                                          </tr>
+                                          <tr>
+                                             <th> Land </th>
+                                             <td>FR, France</td>
+                                          </tr>
+                                          <tr>
+                                             <th> Geonames ID </th>
+                                             <td><a href="https://sws.geonames.org/2988507/" target="_blank">2988507</a></td>
+                                          </tr>
+                                          <tr>
+                                             <th></th>
+                                             <td style="padding-top: 1em;"><a href="hsl_place_id_44.html"> Weitere Details </a></td>
                                           </tr>
                                        </tbody>
                                     </table>
@@ -1863,6 +1833,37 @@
                               </div>
                            </div>
                         </div>
+                        <div class="modal fade" id="hsl_place_id_52" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Troja" aria-hidden="true">
+                           <div class="modal-dialog modal-dialog-centered">
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Troja</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                                 <div class="modal-body">
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <th> Alternativname </th>
+                                             <td></td>
+                                          </tr>
+                                          <tr>
+                                             <th> Land </th>
+                                             <td>TR, Turkey</td>
+                                          </tr>
+                                          <tr>
+                                             <th> Geonames ID </th>
+                                             <td><a href="https://sws.geonames.org/298885/" target="_blank">298885</a></td>
+                                          </tr>
+                                          <tr>
+                                             <th></th>
+                                             <td style="padding-top: 1em;"><a href="hsl_place_id_52.html"> Weitere Details </a></td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </div>
+                                 <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
+                              </div>
+                           </div>
+                        </div>
                         <div class="modal fade" id="" data-bs-toggle="modal" tabindex="-1" aria-labelledby="" aria-hidden="true">
                            <div class="modal-dialog modal-dialog-centered">
                               <div class="modal-content">
@@ -5075,6 +5076,78 @@
                                           <tr>
                                              <th></th>
                                              <td style="padding-top: 1em;"><a href=".html"> Weitere Details </a></td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </div>
+                                 <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="modal fade" id="hsl_work_id_1107" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Die Odyssee, op. 30" aria-hidden="true">
+                           <div class="modal-dialog modal-dialog-centered">
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Die Odyssee, op. 30</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                                 <div class="modal-body">
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <th> Autor(en) </th>
+                                             <td>
+                                                <ul>
+                                                   <li><a href=".html">Bungert, August</a></li>
+                                                </ul>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <th> Alternativtitel </th>
+                                             <td>Odysse,  Homerische Welt</td>
+                                          </tr>
+                                          <tr>
+                                             <th> GND ID </th>
+                                             <td><a href="" target="_blank"></a></td>
+                                          </tr>
+                                          <tr>
+                                             <th></th>
+                                             <td style="padding-top: 1em;"><a href="hsl_work_id_1107.html"> Weitere Details </a></td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </div>
+                                 <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="modal fade" id="hsl_work_id_1108" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Briséïs ou Les amants de Corinthe" aria-hidden="true">
+                           <div class="modal-dialog modal-dialog-centered">
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Briséïs ou Les amants de Corinthe</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                                 <div class="modal-body">
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <th> Autor(en) </th>
+                                             <td>
+                                                <ul>
+                                                   <li><a href=".html">Chabrier, Emmanuel</a></li>
+                                                   <li><a href=".html">Mendès, Catulle</a></li>
+                                                   <li><a href=".html">Mikhaël, Éphraïm</a></li>
+                                                </ul>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <th> Alternativtitel </th>
+                                             <td>Briseïs ou La fiancée de Corinthe</td>
+                                          </tr>
+                                          <tr>
+                                             <th> GND ID </th>
+                                             <td><a href="https://d-nb.info/gnd/300448406" target="_blank">300448406</a></td>
+                                          </tr>
+                                          <tr>
+                                             <th></th>
+                                             <td style="padding-top: 1em;"><a href="hsl_work_id_1108.html"> Weitere Details </a></td>
                                           </tr>
                                        </tbody>
                                     </table>
@@ -5114,30 +5187,21 @@
                               </div>
                            </div>
                         </div>
-                        <div class="modal fade" id="hsl_work_id_1106" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Die Kriegsgefangene" aria-hidden="true">
+                        <div class="modal fade" id="hsl_work_id_1028" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Altes Testament" aria-hidden="true">
                            <div class="modal-dialog modal-dialog-centered">
                               <div class="modal-content">
                                  <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Die Kriegsgefangene</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Altes Testament</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
                                  <div class="modal-body">
                                     <table>
                                        <tbody>
                                           <tr>
-                                             <th> Autor(en) </th>
-                                             <td>
-                                                <ul>
-                                                   <li><a href=".html">Formey, Alfred</a></li>
-                                                   <li><a href=".html">Goldmark, Karl</a></li>
-                                                </ul>
-                                             </td>
-                                          </tr>
-                                          <tr>
                                              <th> GND ID </th>
-                                             <td><a href="https://d-nb.info/gnd/1063667585" target="_blank">1063667585</a></td>
+                                             <td><a href="https://d-nb.info/gnd/4001515-4" target="_blank">4001515-4</a></td>
                                           </tr>
                                           <tr>
                                              <th></th>
-                                             <td style="padding-top: 1em;"><a href="hsl_work_id_1106.html"> Weitere Details </a></td>
+                                             <td style="padding-top: 1em;"><a href="hsl_work_id_1028.html"> Weitere Details </a></td>
                                           </tr>
                                        </tbody>
                                     </table>
@@ -5146,11 +5210,11 @@
                               </div>
                            </div>
                         </div>
-                        <div class="modal fade" id="hsl_work_id_1108" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Briséïs ou Les amants de Corinthe" aria-hidden="true">
+                        <div class="modal fade" id="hsl_work_id_1112" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Merlin" aria-hidden="true">
                            <div class="modal-dialog modal-dialog-centered">
                               <div class="modal-content">
                                  <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Briséïs ou Les amants de Corinthe</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Merlin</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
                                  <div class="modal-body">
                                     <table>
                                        <tbody>
@@ -5158,23 +5222,18 @@
                                              <th> Autor(en) </th>
                                              <td>
                                                 <ul>
-                                                   <li><a href=".html">Chabrier, Emmanuel</a></li>
-                                                   <li><a href=".html">Mendès, Catulle</a></li>
-                                                   <li><a href=".html">Mikhaël, Éphraïm</a></li>
+                                                   <li><a href=".html">Goldmark, Karl</a></li>
+                                                   <li><a href=".html">Lipiner, Siegfried</a></li>
                                                 </ul>
                                              </td>
                                           </tr>
                                           <tr>
-                                             <th> Alternativtitel </th>
-                                             <td>Briseïs ou La fiancée de Corinthe</td>
-                                          </tr>
-                                          <tr>
                                              <th> GND ID </th>
-                                             <td><a href="https://d-nb.info/gnd/300448406" target="_blank">300448406</a></td>
+                                             <td><a href="https://d-nb.info/gnd/300986998" target="_blank">300986998</a></td>
                                           </tr>
                                           <tr>
                                              <th></th>
-                                             <td style="padding-top: 1em;"><a href="hsl_work_id_1108.html"> Weitere Details </a></td>
+                                             <td style="padding-top: 1em;"><a href="hsl_work_id_1112.html"> Weitere Details </a></td>
                                           </tr>
                                        </tbody>
                                     </table>
@@ -5242,6 +5301,73 @@
                                           <tr>
                                              <th></th>
                                              <td style="padding-top: 1em;"><a href="hsl_work_id_1110.html"> Weitere Details </a></td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </div>
+                                 <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="modal fade" id="hsl_work_id_104" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Les Troyens, H133" aria-hidden="true">
+                           <div class="modal-dialog modal-dialog-centered">
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Les Troyens, H133</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                                 <div class="modal-body">
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <th> Autor(en) </th>
+                                             <td>
+                                                <ul>
+                                                   <li><a href=".html">Berlioz, Hector</a></li>
+                                                </ul>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <th> Alternativtitel </th>
+                                             <td>Les Troyennes, Die Trojaner, Die Trojanerinnen, Die Trojaner in Kathargo</td>
+                                          </tr>
+                                          <tr>
+                                             <th> GND ID </th>
+                                             <td><a href="https://d-nb.info/gnd/300019459" target="_blank">300019459</a></td>
+                                          </tr>
+                                          <tr>
+                                             <th></th>
+                                             <td style="padding-top: 1em;"><a href="hsl_work_id_104.html"> Weitere Details </a></td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </div>
+                                 <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="modal fade" id="hsl_work_id_1106" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Die Kriegsgefangene" aria-hidden="true">
+                           <div class="modal-dialog modal-dialog-centered">
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Die Kriegsgefangene</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                                 <div class="modal-body">
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <th> Autor(en) </th>
+                                             <td>
+                                                <ul>
+                                                   <li><a href=".html">Formey, Alfred</a></li>
+                                                   <li><a href=".html">Goldmark, Karl</a></li>
+                                                </ul>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <th> GND ID </th>
+                                             <td><a href="https://d-nb.info/gnd/1063667585" target="_blank">1063667585</a></td>
+                                          </tr>
+                                          <tr>
+                                             <th></th>
+                                             <td style="padding-top: 1em;"><a href="hsl_work_id_1106.html"> Weitere Details </a></td>
                                           </tr>
                                        </tbody>
                                     </table>
@@ -5319,131 +5445,6 @@
                               </div>
                            </div>
                         </div>
-                        <div class="modal fade" id="hsl_work_id_1107" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Die Odyssee, op. 30" aria-hidden="true">
-                           <div class="modal-dialog modal-dialog-centered">
-                              <div class="modal-content">
-                                 <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Die Odyssee, op. 30</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                                 <div class="modal-body">
-                                    <table>
-                                       <tbody>
-                                          <tr>
-                                             <th> Autor(en) </th>
-                                             <td>
-                                                <ul>
-                                                   <li><a href=".html">Bungert, August</a></li>
-                                                </ul>
-                                             </td>
-                                          </tr>
-                                          <tr>
-                                             <th> Alternativtitel </th>
-                                             <td>Odysse,  Homerische Welt</td>
-                                          </tr>
-                                          <tr>
-                                             <th> GND ID </th>
-                                             <td><a href="" target="_blank"></a></td>
-                                          </tr>
-                                          <tr>
-                                             <th></th>
-                                             <td style="padding-top: 1em;"><a href="hsl_work_id_1107.html"> Weitere Details </a></td>
-                                          </tr>
-                                       </tbody>
-                                    </table>
-                                 </div>
-                                 <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="modal fade" id="hsl_work_id_1028" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Altes Testament" aria-hidden="true">
-                           <div class="modal-dialog modal-dialog-centered">
-                              <div class="modal-content">
-                                 <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Altes Testament</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                                 <div class="modal-body">
-                                    <table>
-                                       <tbody>
-                                          <tr>
-                                             <th> GND ID </th>
-                                             <td><a href="https://d-nb.info/gnd/4001515-4" target="_blank">4001515-4</a></td>
-                                          </tr>
-                                          <tr>
-                                             <th></th>
-                                             <td style="padding-top: 1em;"><a href="hsl_work_id_1028.html"> Weitere Details </a></td>
-                                          </tr>
-                                       </tbody>
-                                    </table>
-                                 </div>
-                                 <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="modal fade" id="hsl_work_id_104" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Les Troyens, H133" aria-hidden="true">
-                           <div class="modal-dialog modal-dialog-centered">
-                              <div class="modal-content">
-                                 <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Les Troyens, H133</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                                 <div class="modal-body">
-                                    <table>
-                                       <tbody>
-                                          <tr>
-                                             <th> Autor(en) </th>
-                                             <td>
-                                                <ul>
-                                                   <li><a href=".html">Berlioz, Hector</a></li>
-                                                </ul>
-                                             </td>
-                                          </tr>
-                                          <tr>
-                                             <th> Alternativtitel </th>
-                                             <td>Les Troyennes, Die Trojaner, Die Trojanerinnen, Die Trojaner in Kathargo</td>
-                                          </tr>
-                                          <tr>
-                                             <th> GND ID </th>
-                                             <td><a href="https://d-nb.info/gnd/300019459" target="_blank">300019459</a></td>
-                                          </tr>
-                                          <tr>
-                                             <th></th>
-                                             <td style="padding-top: 1em;"><a href="hsl_work_id_104.html"> Weitere Details </a></td>
-                                          </tr>
-                                       </tbody>
-                                    </table>
-                                 </div>
-                                 <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="modal fade" id="hsl_work_id_1112" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Merlin" aria-hidden="true">
-                           <div class="modal-dialog modal-dialog-centered">
-                              <div class="modal-content">
-                                 <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Merlin</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                                 <div class="modal-body">
-                                    <table>
-                                       <tbody>
-                                          <tr>
-                                             <th> Autor(en) </th>
-                                             <td>
-                                                <ul>
-                                                   <li><a href=".html">Goldmark, Karl</a></li>
-                                                   <li><a href=".html">Lipiner, Siegfried</a></li>
-                                                </ul>
-                                             </td>
-                                          </tr>
-                                          <tr>
-                                             <th> GND ID </th>
-                                             <td><a href="https://d-nb.info/gnd/300986998" target="_blank">300986998</a></td>
-                                          </tr>
-                                          <tr>
-                                             <th></th>
-                                             <td style="padding-top: 1em;"><a href="hsl_work_id_1112.html"> Weitere Details </a></td>
-                                          </tr>
-                                       </tbody>
-                                    </table>
-                                 </div>
-                                 <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
-                              </div>
-                           </div>
-                        </div>
                         <div class="modal fade" id="hsl_work_id_166" data-bs-toggle="modal" tabindex="-1" aria-labelledby="Iphigénie en Aulide, Wq. 40" aria-hidden="true">
                            <div class="modal-dialog modal-dialog-centered">
                               <div class="modal-content">
@@ -5485,7 +5486,7 @@
                </div>
             </div>
          </div>
-         <div class="wrapper bg-light translate-de" id="wrapper-footer-full">
+         <div class="wrapper translate-de" id="wrapper-footer-full">
             <div class="container" id="footer-full-content" tabindex="-1">
                <div class="footer-separator">
                   KONTAKT
@@ -5519,19 +5520,14 @@
                   <div class="footer-widget col-lg-4 col-md-3 col-sm-4">
                      <h6 class="font-weight-bold">PROJEKTPARTNER</h6>
                      <div class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-12">
-                           <div class="flex-md-row mb-4 align-items-center"><a href="https://www.fwf.ac.at"><img class="card-img-right flex-auto d-md-block" src="https://www.fwf.ac.at/fileadmin/Website/Logos/FWF_Logo.png" alt="FWF Der Wissenschaftsfond Logo" style="max-width: 180px; height: auto; margin-top:1em;" title="FWF Der Wissenschaftsfond" /></a></div>
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                           <div class="flex-md-row mb-4 align-items-center d-flex justify-content-center"><a href="https://www.fwf.ac.at"><img class="card-img-right flex-auto d-md-block" src="https://www.fwf.ac.at/fileadmin/Website/Logos/FWF_Logo.png" alt="FWF Der Wissenschaftsfond Logo" style="max-width: 200px; height: auto; margin-top:1em;" title="FWF Der Wissenschaftsfond" /></a></div>
                         </div>
-                        <div class="col-lg-6 col-md-6 col-sm-12">
-                           <div class="flex-md-row mb-4 align-items-center"><a href="https://www.wien.gv.at"><img class="card-img-right flex-auto d-md-block" src="images/csm_Stadt-Wien_Logo_pos_rgb_ae2ce8a131.png" alt="Stadt Wien Logo" style="max-width: 140px; height: auto; margin-top:1em;" title="Stadt Wien" /></a></div>
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                           <div class="flex-md-row mb-4 align-items-center d-flex justify-content-center"><a href="https://www.wien.gv.at"><img class="card-img-right flex-auto d-md-block" src="images/csm_Stadt-Wien_Logo_pos_rgb_ae2ce8a131.png" alt="Stadt Wien Logo" style="max-width: 140px; height: auto; margin-top:1em;" title="Stadt Wien" /></a></div>
                         </div>
-                     </div>
-                     <div class="row">
-                        <div class="col-lg-4 col-md-4 col-sm-12">
-                           <div class="flex-md-row mb-4 align-items-center"></div>
-                        </div>
-                        <div class="col-lg-8 col-md-8 col-sm-12">
-                           <div class="flex-md-row mb-4 align-items-center"><a href="https://www.oenb.at"><img class="card-img-right flex-auto d-md-block" src="images/Oesterreichische_Nationalbank_Logo.svg" alt="Österreichische Nationalbank Logo" style="max-width: 200px; height: auto; margin-top:1em;" title="Österreichische Nationalbank" /></a></div>
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                           <div class="flex-md-row mb-4 align-items-center d-flex justify-content-center"><a href="https://www.oenb.at"><img class="card-img-right flex-auto d-md-block" src="images/Oesterreichische_Nationalbank_Logo.svg" alt="Österreichische Nationalbank Logo" style="max-width: 200px; height: auto; margin-top:1em;" title="Österreichische Nationalbank" /></a></div>
                         </div>
                      </div>
                   </div>
@@ -5554,9 +5550,9 @@
                                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-4.466 19.59c-.405.078-.534-.171-.534-.384v-2.195c0-.747-.262-1.233-.55-1.481 1.782-.198 3.654-.875 3.654-3.947 0-.874-.312-1.588-.823-2.147.082-.202.356-1.016-.079-2.117 0 0-.671-.215-2.198.82-.64-.18-1.324-.267-2.004-.271-.68.003-1.364.091-2.003.269-1.528-1.035-2.2-.82-2.2-.82-.434 1.102-.16 1.915-.077 2.118-.512.56-.824 1.273-.824 2.147 0 3.064 1.867 3.751 3.645 3.954-.229.2-.436.552-.508 1.07-.457.204-1.614.557-2.328-.666 0 0-.423-.768-1.227-.825 0 0-.78-.01-.055.487 0 0 .525.246.889 1.17 0 0 .463 1.428 2.688.944v1.489c0 .211-.129.459-.528.385-3.18-1.057-5.472-4.056-5.472-7.59 0-4.419 3.582-8 8-8s8 3.581 8 8c0 3.533-2.289 6.531-5.466 7.59z"></path></svg></a></div>
                            </div>
                            <div class="row">
-                              <div class="custom-html-widget col-12 py-2"><label>App: </label><a style="margin-left: .5rem;" href="https://doi.org/10.5281/zenodo.8366294"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.8366294.svg" alt="DOI" /></a></div>
-                              <div class="custom-html-widget col-12 py-2"><label>Daten (VMS):</label><a style="margin-left: .5rem;" href="https://zenodo.org/badge/latestdoi/564263510"><img src="https://zenodo.org/badge/564263510.svg" alt="DOI" /></a></div>
-                              <div class="custom-html-widget col-12 py-2"><label>Daten (NFP):</label><a style="margin-left: .5rem;" href="https://doi.org/10.5281/zenodo.8033446"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.8033446.svg" alt="DOI" /></a></div>
+                              <div class="custom-html-widget col-12 py-2 d-block"><label>App: </label><a class="d-block" href="https://doi.org/10.5281/zenodo.8366294"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.8366294.svg" alt="DOI" /></a></div>
+                              <div class="custom-html-widget col-12 py-2 d-block"><label>Daten (VMS):</label><a class="d-block" href="https://zenodo.org/badge/latestdoi/564263510"><img src="https://zenodo.org/badge/564263510.svg" alt="DOI" /></a></div>
+                              <div class="custom-html-widget col-12 py-2 d-block"><label>Daten (NFP):</label><a class="d-block" href="https://doi.org/10.5281/zenodo.8033446"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.8033446.svg" alt="DOI" /></a></div>
                            </div>
                         </div>
                      </div>
