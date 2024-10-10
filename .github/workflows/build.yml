@@ -27,7 +27,10 @@ jobs:
       TYPESENSE_API_KEY: ${{secrets.TYPESENSE_API_KEY}}
     steps:
     - name: Perform Checkout
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
+    - uses: actions/setup-python@v5
+      with:
+        python-version: '3.10'
     - name: Fetch data
       run: |
         ./fetch_data_app.sh
@@ -45,10 +48,6 @@ jobs:
     - name: Reorganize data
       run: |
         ant -f build_app/ant/preprocess.xml
-    - uses: actions/checkout@v4
-    - uses: actions/setup-python@v5
-      with:
-        python-version: '3.10'
     - name: Add attributes
       run: |
         pip install -U pip
