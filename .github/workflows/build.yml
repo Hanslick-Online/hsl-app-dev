@@ -62,7 +62,7 @@ jobs:
         path: "./html"
   compile_latex:
     name: Produce PDF files
-    id: xml2latex
+    runs-on: ubuntu-latest
     needs: build_pages
     steps:
     - name: Perform Checkout
