@@ -24,21 +24,21 @@ jobs:
     steps:
     - name: Perform Checkout
       uses: actions/checkout@v4
-    - name: Fetch data
-      run: |
-        ./fetch_data_app.sh
     - name: Setup Python
       uses: actions/setup-python@v5
       with:
-        python-version: '3.10'
+         python-version: '3.10'
     - name: Setup Java / Ant
       uses: actions/setup-java@v4
       with:
         distribution: 'zulu'
         java-version: '11'
+    - name: Fetch data
+      run: |
+        ./fetch_data_app.sh
     - name: Install Saxon, Ant and Fundament
       run: |
-        sudo pt-get update && sudo apt-get install ant -y --no-install-recommend
+        sudo apt-get update && sudo apt-get install ant -y --no-install-recommend
         ./build_app/shell/script.sh
     - name: preprocess
       run: |
