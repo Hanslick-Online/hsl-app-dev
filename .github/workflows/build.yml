@@ -63,6 +63,7 @@ jobs:
   compile_latex:
     name: Produce PDF files
     needs: build_pages
+    runs-on: ubuntu-latest
     steps:
     - name: Perform Checkout
       uses: actions/checkout@v4
@@ -93,6 +94,7 @@ jobs:
   deploy:
     name: Deploy GH Pages
     needs: build_pages
+    runs-on: ubuntu-latest
     steps:
     - name: Deploy to GitHub Pages
       id: deployment
