@@ -60,8 +60,8 @@ jobs:
       with:
         # Upload entire repository
         path: "./html"
-      compile_latex:
-  name: Produce PDF files
+  compile_latex:
+    name: Produce PDF files
     id: xml2latex
     needs: build_pages
     steps:
