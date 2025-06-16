@@ -62,7 +62,6 @@ jobs:
         path: "./html"
   compile_latex:
     name: Produce PDF files
-    id: xml2latex
     needs: build_pages
     steps:
     - name: Perform Checkout
