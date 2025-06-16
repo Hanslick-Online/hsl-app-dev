@@ -38,7 +38,7 @@ jobs:
         java-version: '11'
     - name: Install Saxon, Ant and Fundament
       run: |
-        apt-get update && apt-get install ant -y --no-install-recommend
+        sudo pt-get update && sudo apt-get install ant -y --no-install-recommend
         ./build_app/shell/script.sh
     - name: preprocess
       run: |
