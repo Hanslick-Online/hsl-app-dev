@@ -38,7 +38,7 @@ jobs:
         ./fetch_data_app.sh
     - name: Install Saxon, Ant and Fundament
       run: |
-        sudo apt-get update && sudo apt-get install ant -y --no-install-recommend
+        apt-get update && apt-get install ant -y --no-install-recommend
         ./build_app/shell/script.sh
     - name: preprocess
       run: |
