@@ -28,10 +28,6 @@ jobs:
       uses: actions/setup-python@v5
       with:
          python-version: '3.10'
-    - name: Install Python libraries
-      run: |
-        pip install -U pip
-        pip install -r build_app/python/requirements.txt
     - name: Setup Java / Ant
       uses: actions/setup-java@v4
       with:
@@ -40,8 +36,12 @@ jobs:
     - name: Fetch static-app skeleton
       run: |
         ./fetch_data_app.sh
-    - name: Fetch dat
+    - name: Fetch data
       run:  ./build_app/shell/fetch_data.sh
+    - name: Install Python libraries
+      run: |
+        pip install -U pip
+        pip install -r build_app/python/requirements.txt
     - name: Install Saxon, Ant and Fundament
       run: |
         apt-get update && apt-get install ant -y --no-install-recommend
