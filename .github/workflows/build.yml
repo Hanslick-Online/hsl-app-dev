@@ -45,6 +45,7 @@ jobs:
       with:
         name: env-artifact
         # Upload entire repository
+        path: "./"
   build_pages:
     name: Build HTML pages
     runs-on: ubuntu-latest
