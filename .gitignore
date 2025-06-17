@@ -6,7 +6,7 @@
 /traktat-facs
 *.html
 /test
-
+.*env
 html/*html
 html/c__*xml
 html/d__*xml
