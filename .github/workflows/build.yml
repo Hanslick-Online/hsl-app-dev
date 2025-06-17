@@ -115,6 +115,28 @@ jobs:
       with:
         name: site-artifact
         path: "html"
+  type_sense:
+    name: Reindex TypeSense
+    runs-on: ubuntu-latest
+    needs: build_pages
+    env:
+      TYPESENSE_HOST: typesense.acdh-dev.oeaw.ac.at
+      TYPESENSE_PORT: 443
+      TYPESENSE_PROTOCOL: https
+      TYPESENSE_API_KEY: ${{secrets.TYPESENSE_API_KEY}}
+    steps:
+    - name: Perform Checkout
+      uses: actions/checkout@v4
+    - name: Download html-artifact
+      uses: actions/download-artifact@v4
+      with:
+        name: html-artifact
+  # - name: Preprocess data for Typesense
+  #   run: |
+  #     ant -f build_app/ant/fixtures.xml
+  # - name: Build Typesense Index
+  #  run: |
+  #    python build_app/python/make_ts_index.py
   deploy:
     name: Deploy to GitHub Pages
     runs-on: ubuntu-latest
