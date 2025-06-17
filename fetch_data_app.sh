@@ -1,5 +1,4 @@
-# bin/bash
-
+#!/bin/bash
 rm hsl-app-dev.zip
 rm -rf hsl-app-dev
 wget https://github.com/Hanslick-Online/hsl-app/archive/refs/heads/dev.zip
