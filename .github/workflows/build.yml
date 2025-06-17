@@ -40,10 +40,6 @@ jobs:
       run: |
         pip install -U pip
         pip install -r build_app/python/requirements.txt
-    - name: Install Saxon, Ant and Fundament
-      run: |
-        apt-get update && apt-get install ant -y --no-install-recommend
-        ./build_app/shell/script.sh
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3
       with:
@@ -60,11 +56,15 @@ jobs:
       uses: actions/download-artifact@v4
       with:
         name: env-artifact
+    - name: Fetch data
+      run:  ./build_app/shell/fetch_data.sh
+    - name: Install Saxon, Ant and Fundament
+      run: |
+        apt-get update && apt-get install ant -y --no-install-recommend
+        ./build_app/shell/script.sh
     - name: preprocess
       run: |
         ant -f build_app/ant/preprocess.xml
-    - name: Fetch data
-      run:  ./build_app/shell/fetch_data.sh
     - name: add attributes and denormalize indices
       run: |
         ./build_app/shell/attributes.sh
