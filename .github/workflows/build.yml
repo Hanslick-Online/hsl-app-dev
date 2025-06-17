@@ -60,9 +60,8 @@ jobs:
         path: build_app
     - name: Fetch data
       run: |
-      chmod +x build_app/shell/* build_app/python/*
-      ./build_app/shell/fetch_data.sh
-      run:  ./build_app/shell/fetch_data.sh
+        chmod +x build_app/shell/* build_app/python/*
+        ./build_app/shell/fetch_data.sh
     - name: Install Saxon, Ant and Fundament
       run: |
         apt-get update && apt-get install ant -y --no-install-recommend
