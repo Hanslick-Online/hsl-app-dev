@@ -57,7 +57,7 @@ jobs:
       uses: actions/download-artifact@v4
       with:
         name: env-artifact
-        path: build_app
+        path: .
     - name: Fetch data
       run: |
         chmod +x build_app/shell/* build_app/python/*
@@ -112,6 +112,7 @@ jobs:
         folders=("data/critics" "data/traktat" "data/vms")
         find "html" -type f -name "{c,t,v,d}__*.xml" | while read filename; do
           echo "Transforming $filename"
+          chmod +x build_app/python/xml2latex.py
           build_app/python/xml2latex.py "$filename" "tmp/${filename%.xml}.tex)"
         done
     - name: Compile LaTeX to PDF
@@ -140,8 +141,8 @@ jobs:
     - name: Download html-artifact
       uses: actions/download-artifact@v4
       with:
-        name: data-artifact
-        path: data
+        name: env-artifact
+        path: .
   # - name: Preprocess data for Typesense
   #   run: |
   #     ant -f build_app/ant/fixtures.xml
@@ -175,4 +176,5 @@ jobs:
    #     ant -f build_app/ant/fixtures.xml
     #- name: Build Typesense Index
     #  run: |
+    #    chmod +x build_app/python/make_ts_index.py
     #    python build_app/python/make_ts_index.py
