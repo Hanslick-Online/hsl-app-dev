@@ -63,11 +63,6 @@ jobs:
     - name: Upload artifact
       uses: actions/upload-artifact@v4
       with:
-        name: html-artifact
-        path: "./html"
-    - name: Upload artifact
-      uses: actions/upload-artifact@v4
-      with:
         name: data-artifact
         # Upload entire repository
         path: .
@@ -78,23 +73,26 @@ jobs:
     steps:
     - name: Perform Checkout
       uses: actions/checkout@v4
-    - name: Download html-artifact
+    - name: Download data-artifact
       uses: actions/download-artifact@v4
       with:
-        name: html-artifact
-        path: html
+        name: data-artifact
+        path: .
     - name: Install TeX Live
       run: |
         sudo apt-get update
         sudo apt-get install -y texlive-xetex texlive-latex-recommended texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra texlive-lang-german
     - name: Transform XML-TEI to LaTeX
       run: |
+        folders = "data/{traktakt,vms,critics,doc}/editions"
         mkdir -p tmp/tex html/pdf
-        folders=("data/critics" "data/traktat" "data/vms")
-        find "html" -type f -name "{c,t,v,d}__*.xml" | while read filename; do
-          echo "Transforming $filename"
-          chmod +x build_app/python/xml2latex.py
-          build_app/python/xml2latex.py "$filename" "tmp/${filename%.xml}.tex)"
+        for dir in $folders; do
+          echo "Processing directory: $dir"
+          find "$dir" -type f -name "*.xml" | while read filename; do
+            echo "Transforming $filename"
+            chmod +x build_app/python/xml2latex.py
+            build_app/python/xml2latex.py "$filename" "tmp/${filename%.xml}.tex"
+          done
         done
     - name: Compile LaTeX to PDF
       run: |
