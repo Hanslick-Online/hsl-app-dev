@@ -28,14 +28,20 @@ jobs:
       uses: actions/setup-python@v5
       with:
          python-version: '3.10'
+    - name: Install Python libraries
+      run: |
+        pip install -U pip
+        pip install -r build_app/python/requirements.txt
     - name: Setup Java / Ant
       uses: actions/setup-java@v4
       with:
         distribution: 'zulu'
         java-version: '11'
-    - name: Fetch data
+    - name: Fetch static-app skeleton
       run: |
         ./fetch_data_app.sh
+    - name: Fetch dat
+      run:  ./build_app/shell/fetch_data.sh
     - name: Install Saxon, Ant and Fundament
       run: |
         apt-get update && apt-get install ant -y --no-install-recommend
@@ -45,8 +51,6 @@ jobs:
         ant -f build_app/ant/preprocess.xml
     - name: add attributes and denormalize indices
       run: |
-        pip install -U pip
-        pip install -r build_app/python/requirements.txt
         ./build_app/shell/attributes.sh
         ./build_app/shell/denormalize.sh
     - name: Build
