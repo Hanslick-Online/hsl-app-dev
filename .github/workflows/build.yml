@@ -92,14 +92,15 @@ jobs:
         sudo apt-get install -y texlive-xetex texlive-latex-recommended texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra texlive-lang-german
     - name: Transform XML-TEI to LaTeX
       run: |
-        folders="data/traktat/editions data/vms/editions data/critics/editions data/doc/editions"
+        folders="traktat vms critics doc"
         mkdir -p tmp/tex html/pdf
         for dir in $folders; do
-          echo "Processing directory: $dir"
-          find "$dir" -type f -name "*.xml" | while read filename; do
+          echo "Processing directory: data/$dir/editions"
+          find "data/$dir/editions" -type f -name "*.xml" | while read filepath; do
+            filename=$(basename "$filepath")
             echo "Transforming $filename"
             chmod +x build_app/python/xml2latex.py
-            build_app/python/xml2latex.py "$filename" "tmp/${filename%.xml}.tex"
+            build_app/python/xml2latex.py "$filepath" data/${dir}/tex/{filename%.xml}.tex"
           done
         done
     - name: Compile LaTeX to PDF
