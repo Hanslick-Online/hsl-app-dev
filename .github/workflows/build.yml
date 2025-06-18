@@ -85,10 +85,6 @@ jobs:
       run: |
         pip install -U pip
         pip install -r build_app/python/requirements.txt
-
-    - name: Setup Java / Ant
-      uses: actions/setup-java@v4
- 
     - name: Install TeX Live
       run: |
         sudo apt-get update
