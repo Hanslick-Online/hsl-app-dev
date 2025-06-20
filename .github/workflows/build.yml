@@ -102,6 +102,9 @@ jobs:
             build_app/python/xml2latex.py "$filepath" "tmp/tex/${filename%.xml}.tex"
           done
         done
+    - name: Print .tex file header
+      run: |
+        head -n 20 tmp/tex/v__1855GoettingischeGelehrteAnzeigenAusschnitt.tex
     - name: Compile LaTeX to PDF
       run: |
         find "tmp/tex" -type f -name "*.tex" | while read filename; do
