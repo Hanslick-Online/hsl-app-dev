@@ -100,7 +100,7 @@ jobs:
             filename=$(basename "$filepath")
             echo "Transforming $filename"
             chmod +x build_app/python/xml2latex.py
-            build_app/python/xml2latex.py "$filepath" "tmp/tex/{filename%.xml}.tex"
+            build_app/python/xml2latex.py "$filepath" "tmp/tex/${filename%.xml}.tex"
           done
         done
     - name: Compile LaTeX to PDF
