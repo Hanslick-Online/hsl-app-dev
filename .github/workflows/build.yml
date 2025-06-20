@@ -92,9 +92,8 @@ jobs:
         sudo apt-get install -y texlive-xetex texlive-latex-recommended texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra texlive-lang-german
     - name: Transform XML-TEI to LaTeX
       run: |
-        folders="traktat vms critics doc"
         mkdir -p tmp/tex html/pdf
-        for dir in $folders; do
+        for dir in traktat vms critics doc; do
           echo "Processing directory: data/$dir/editions"
           find "data/$dir/editions" -type f -name "*.xml" | while read filepath; do
             filename=$(basename "$filepath")
