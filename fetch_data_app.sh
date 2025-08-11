@@ -1,6 +1,7 @@
 #!/bin/bash
 rm -rf hsl-app-dev* build_app html xslt
-wget https://github.com/Hanslick-Online/hsl-app/archive/refs/heads/dev.zip
+#wget https://github.com/Hanslick-Online/hsl-app/archive/refs/heads/dev.zip
+wget https://github.com/Hanslick-Online/hsl-app/archive/refs/heads/44-full-text-search-more-fine-grained-to-enable-context-search.zip
 unzip dev
 mv hsl-app-dev/*.* ./
 mv hsl-app-dev/{xslt,html,build_app} .
