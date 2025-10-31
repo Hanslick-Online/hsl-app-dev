@@ -46,7 +46,7 @@ jobs:
         ./build_app/shell/fetch_data.sh
     - name: Install Saxon, Ant and Fundament
       run: |
-        ./build_app/shell/dl_imprint.sh
+        ./build_app/shell/script.sh
     - name: preprocess
       run: |
         ant -f build_app/ant/preprocess.xml
