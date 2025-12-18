@@ -18,30 +18,30 @@ jobs:
     runs-on: ubuntu-latest
     env:
       ANT_OPTS: -Xmx5g
-    steps:
-      - name: Perform Checkout
-        uses: actions/checkout@v5
+  steps:
+    - uses: actions/checkout@v5
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.10"
-          cache: "pip"
-          cache-dependency-path: build_app/python/requirements.txt
+    - name: Setup Java / Ant
+      uses: actions/setup-java@v4
+      with:
+        distribution: zulu
+        java-version: "11"
 
-      - name: Setup Java / Ant
-        uses: actions/setup-java@v4
-        with:
-          distribution: "zulu"
-          java-version: "11"
+    - name: Fetch static-app skeleton
+      run: ./fetch_data_app.sh
 
-      - name: Fetch static-app skeleton
-        run: ./fetch_data_app.sh
+    - name: Setup Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.10"
+        cache: pip
+        cache-dependency-path: build_app/python/requirements.txt
 
-      - name: Install Python libraries
-        run: |
-          python -m pip install -U pip
-          pip install -r build_app/python/requirements.txt
+    - name: Install Python libraries
+      run: |
+        python -m pip install -U pip
+        pip install -r build_app/python/requirements.txt
+
 
       - name: Fetch data
         run: |
