@@ -19,6 +19,7 @@ jobs:
     env:
       ANT_OPTS: -Xmx5g
     steps:
+    - Name: Perform checkout
     - uses: actions/checkout@v5
 
     - name: Setup Java / Ant
