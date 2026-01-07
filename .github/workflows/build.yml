@@ -112,6 +112,7 @@ jobs:
             texlive-xetex \
             texlive-latex-recommended \
             texlive-latex-extra \
+            texlive-generic-extra \
             texlive-fonts-recommended \
             texlive-lang-german
           sudo apt-get clean
