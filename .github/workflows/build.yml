@@ -114,7 +114,8 @@ jobs:
             texlive-latex-extra \
             texlive-plain-generic \
             texlive-fonts-recommended \
-            texlive-lang-german
+            texlive-lang-german \
+            fonts-noto-core
           sudo apt-get clean
           sudo rm -rf /var/lib/apt/lists/*
 
