@@ -1,0 +1,36 @@
+name: Test packages availability
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build_pages:
+    name: Build HTML pages
+    runs-on: ubuntu-latest
+    env:
+      ANT_OPTS: -Xmx5g
+    steps:
+      - name: Perform checkout
+        uses: actions/checkout@v5
+      - name: Install TeX Live (minimal set for xelatex)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            texlive-xetex \
+            texlive-latex-recommended \
+            texlive-latex-extra \
+            texlive-plain-generic \
+            texlive-fonts-recommended \
+            texlive-lang-german \
+            fonts-noto-core
+          sudo apt-get clean
+          sudo rm -rf /var/lib/apt/lists/*
