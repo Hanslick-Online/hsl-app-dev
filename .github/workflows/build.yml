@@ -34,7 +34,7 @@ jobs:
           java-version: "11"
 
       - name: Fetch static-app skeleton
-        run: ./fetch_data_app.sh {devBranch}
+        run: ./fetch_data_app.sh ${{ devBranch }}
 
       - name: Setup Python
         uses: actions/setup-python@v5
