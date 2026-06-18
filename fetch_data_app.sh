@@ -3,8 +3,6 @@ if [ $# -eq 0 ]; then
   BRANCH=dev
 else
   BRANCH="$1"
-else
-
 fi
 rm -rf hsl-app-* build_app html xslt
 #wget https://github.com/Hanslick-Online/hsl-app/archive/refs/heads/dev.zip
