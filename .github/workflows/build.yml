@@ -25,28 +25,13 @@ jobs:
       ANT_OPTS: -Xmx5g
     steps:
       - name: Perform checkout
-        uses: actions/checkout@v5
-
-      - name: Setup Java / Ant
-        uses: actions/setup-java@v4
-        with:
-          distribution: zulu
-          java-version: "11"
+        uses: actions/checkout@v7
 
       - name: Fetch static-app skeleton
         run: ./fetch_data_app.sh ${{ inputs.devBranch }}
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.10"
-          # cache: pip
-          # cache-dependency-path: build_app/python/requirements.txt
-
-      - name: Install Python libraries
-        run: |
-          python -m pip install -U pip
-          pip install -r build_app/python/requirements.txt
+      - name: set up uv (Python)
+        uses: astral-sh/setup-uv@v8.1.0
 
       - name: Fetch data
         run: |
@@ -74,7 +59,7 @@ jobs:
         run: ant -f build_app/ant/build.xml
 
       - name: Upload build inputs for downstream jobs
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: data-artifact
           compression-level: 1
@@ -96,22 +81,13 @@ jobs:
     needs: build_pages
     steps:
       - name: Download data-artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: data-artifact
           path: .
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.10"
-          #cache: pip
-          #cache-dependency-path: build_app/python/requirements.txt
-
-      - name: Install Python libs
-        run: |
-          python -m pip install -U pip
-          pip install -r build_app/python/requirements.txt
+      - name: set up uv (Python)
+        uses: astral-sh/setup-uv@v8.1.0
 
       - name: Install TeX Live (minimal set for xelatex)
         run: |
@@ -166,7 +142,7 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: Upload full site artifacts
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: html
 
@@ -181,7 +157,7 @@ jobs:
       TYPESENSE_API_KEY: ${{ secrets.TYPESENSE_API_KEY }}
     steps:
       - name: Download data-artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: data-artifact
           path: .
@@ -195,4 +171,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
