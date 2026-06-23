@@ -47,7 +47,7 @@ jobs:
     - name: Fix wrong pagination in 8th edition
       run: ./build_app/python/fix_facs_1891.py
     - name: Get imprint
-      run: ./build_app/python/dl_imprint.py
+      run: ./build_app/shell/dl_imprint.sh
 
     - name: preprocess
       run: |
