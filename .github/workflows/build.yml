@@ -34,7 +34,9 @@ jobs:
         uses: astral-sh/setup-uv@v8.1.0
 
       - name: Install Python dependencies
-        run: uv sync
+        run: |
+          uv sync
+          echo "$GITHUB_WORKSPACE/.venv/bin" >> $GITHUB_PATH
 
       - name: Fetch data
         run: |
