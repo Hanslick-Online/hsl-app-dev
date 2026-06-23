@@ -3,9 +3,9 @@ on:
   workflow_dispatch:
     inputs:
       devBranch:
-      description: 'Development branch'
-      required: true
-      default: 'dev'
+        description: 'Development branch'
+        required: true
+        default: 'dev'
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
