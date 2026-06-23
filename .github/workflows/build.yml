@@ -93,6 +93,10 @@ jobs:
 
       - name: set up uv (Python)
         uses: astral-sh/setup-uv@v8.1.0
+      - name: Install Python dependencies
+        run: |
+          uv sync
+          echo "$GITHUB_WORKSPACE/.venv/bin" >> $GITHUB_PATH
 
       - name: Install TeX Live (minimal set for xelatex)
         run: |
