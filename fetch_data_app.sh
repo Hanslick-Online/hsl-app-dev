@@ -13,6 +13,6 @@ curl -L -o ${BRANCH}.zip https://github.com/Hanslick-Online/hsl-app/archive/refs
 unzip ${BRANCH}.zip
 #mv  hsl-app-44-full-text-search-more-fine-grained-to-enable-context-search/ hsl-app-${BRANCH}
 mv hsl-app-${BRANCH}/*.* ./
-mv hsl-app-${BRANCH}/{xslt,html,build_app} .
+mv hsl-app-${BRANCH}/{saxon,xslt,html,build_app} .
 chmod +x build_app/python/*py build_app/shell/*
 rm -rf hsl-app-${BRANCH}*
