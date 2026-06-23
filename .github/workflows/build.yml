@@ -23,6 +23,11 @@ jobs:
     runs-on: ubuntu-latest
     env:
       ANT_OPTS: -Xmx5g
+      TYPESENSE_HOST: typesense.acdh-dev.oeaw.ac.at
+      TYPESENSE_PORT: 443
+      TYPESENSE_PROTOCOL: https
+      TYPESENSE_API_KEY: ${{ secrets.TYPESENSE_API_KEY }}
+
     steps:
       - name: Perform checkout
         uses: actions/checkout@v7
@@ -61,122 +66,13 @@ jobs:
       - name: Build
         run: ant -f build_app/ant/build.xml
 
-      - name: Upload build inputs for downstream jobs
-        uses: actions/upload-artifact@v5
-        with:
-          name: data-artifact
-          compression-level: 1
-          retention-days: 1
-          path: |
-            html
-            data
-            build_app
-            fetch_data_app.sh
-            pyproject.toml
-            !**/.git/**
-            !**/.github/**
-            !**/tmp/**
-            !**/__pycache__/**
-            !**/*.pyc
-
-  compile_latex:
-    name: Produce PDF files
-    runs-on: ubuntu-latest
-    needs: build_pages
-    steps:
-      - name: Download data-artifact
-        uses: actions/download-artifact@v8
-        with:
-          name: data-artifact
-          path: .
-
-      - name: set up uv (Python)
-        uses: astral-sh/setup-uv@v8.1.0
-      - name: Install Python dependencies
+      - name: Preprocess data for Typesense
         run: |
-          uv sync
-          echo "$GITHUB_WORKSPACE/.venv/bin" >> $GITHUB_PATH
+          ant -f build_app/ant/fixtures.xml
+      #- name: Build Typesense Index
+      #  run: |
+      #    python build_app/python/make_ts_index.py
 
-      - name: Install TeX Live (minimal set for xelatex)
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y --no-install-recommends \
-            texlive-xetex \
-            texlive-latex-recommended \
-            texlive-latex-extra \
-            texlive-plain-generic \
-            texlive-fonts-recommended \
-            texlive-lang-german \
-            fonts-noto-core
-          sudo apt-get clean
-          sudo rm -rf /var/lib/apt/lists/*
-
-      - name: Transform XML-TEI to LaTeX
-        run: |
-          set -euo pipefail
-          chmod +x build_app/python/xml2latex.py
-          mkdir -p tmp/tex html/pdf
-          for dir in traktat vms critics doc; do
-            find "data/$dir/editions" -type f -name "*.xml" -print0 | \
-              while IFS= read -r -d '' filepath; do
-                base="${filepath##*/}"
-                out="tmp/tex/${base%.xml}.tex"
-                build_app/python/xml2latex.py "$filepath" "$out"
-              done
-          done
-
-      - name: Compile LaTeX to PDF (keep only PDFs)
-        run: |
-          set -euo pipefail
-          mkdir -p tmp/latex-out html/pdf
-          find tmp/tex -type f -name "*.tex" -print0 | \
-            while IFS= read -r -d '' tex; do
-              xelatex -interaction=nonstopmode -halt-on-error -file-line-error \
-                -output-directory="tmp/latex-out" "$tex"
-            done
-          find tmp/latex-out -type f -name "*.pdf" -exec mv -t html/pdf {} +
-          rm -rf tmp/tex tmp/latex-out
-
-      - name: Free disk space before Pages packaging
-        run: |
-          df -h
-          df -i
-          sudo rm -rf /usr/share/dotnet /opt/ghc /usr/local/lib/android || true
-          rm -rf ~/.cache/pip ~/.cache || true
-          df -h
-          df -i
-
-      - name: Setup GitHub Pages
-        uses: actions/configure-pages@v5
-
-      - name: Upload full site artifacts
-        uses: actions/upload-pages-artifact@v5
-        with:
-          path: html
-
-  type_sense:
-    name: Reindex TypeSense
-    runs-on: ubuntu-latest
-    needs: build_pages
-    env:
-      TYPESENSE_HOST: typesense.acdh-dev.oeaw.ac.at
-      TYPESENSE_PORT: 443
-      TYPESENSE_PROTOCOL: https
-      TYPESENSE_API_KEY: ${{ secrets.TYPESENSE_API_KEY }}
-    steps:
-      - name: Download data-artifact
-        uses: actions/download-artifact@v8
-        with:
-          name: data-artifact
-          path: .
-
-  deploy:
-    runs-on: ubuntu-latest
-    needs: compile_latex
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
